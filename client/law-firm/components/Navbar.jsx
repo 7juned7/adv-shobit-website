@@ -1,0 +1,181 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+
+const SERVICES = [
+  "Corporate Law",
+  "Commercial Litigation",
+  "Property Law",
+  "Asset Protection",
+];
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+  // 🔥 Scroll detection
+  useEffect(() => {
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 60);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // 🔥 Close dropdown on outside click
+  useEffect(() => {
+    const handleClick = () => setOpen(false);
+    window.addEventListener("click", handleClick);
+    return () => window.removeEventListener("click", handleClick);
+  }, []);
+
+  return (
+    <>
+      {/* HEADER */}
+      <header className="fixed inset-x-0 top-0 z-50 flex justify-center">
+        
+        {/* NAV */}
+        <nav
+          className={`transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+            scrolled
+              ? "mt-4 w-[80%] px-8 py-4 rounded-2xl bg-gradient-to-br from-[#0f172a]/80 via-[#1e293b]/80 to-black/80 backdrop-blur-xl border border-white/10 shadow-xl"
+              : "w-full px-8 py-4 bg-transparent"
+          }`}
+        >
+          <div className="flex items-center justify-between">
+            
+            {/* LOGO */}
+            <Link
+              href="/"
+              className="text-white font-semibold text-lg md:text-xl tracking-wide"
+            >
+              Anurag Narain & Associates
+            </Link>
+
+            {/* DESKTOP NAV */}
+            <div className="hidden md:flex flex-col items-start text-sm font-medium text-white">
+              
+              {/* TOP NAV ROW */}
+              <div className="flex items-center gap-10">
+                <a href="#about" className="nav-link">About</a>
+
+                {/* SERVICES BUTTON */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setOpen(!open);
+                  }}
+                  className="nav-link flex items-center gap-1"
+                >
+                  Services <span className="text-xs">▾</span>
+                </button>
+
+                <a href="#team" className="nav-link">Team</a>
+                <a href="#contact" className="nav-link">Contact</a>
+              </div>
+
+              {/* 🔥 EXPANDABLE SERVICES (CONNECTED) */}
+              <div
+                className={`overflow-hidden transition-all duration-500 ${
+                  open ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="grid grid-cols-2 gap-2 text-sm text-white/80">
+                  {SERVICES.map((s, i) => (
+                    <a
+                      key={i}
+                      href="#services"
+                      className="px-3 py-2 rounded-lg hover:bg-white/10 transition"
+                    >
+                      {s}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <button className="hidden md:block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition">
+              Book Consultation
+            </button>
+
+            {/* HAMBURGER */}
+            <button
+              onClick={() => setMobileMenu(!mobileMenu)}
+              className="md:hidden flex flex-col gap-1.5 z-50"
+              aria-label="Toggle Menu"
+            >
+              <span className={`w-6 h-[2px] bg-white transition-all ${mobileMenu ? "rotate-45 translate-y-2" : ""}`} />
+              <span className={`w-6 h-[2px] bg-white transition-all ${mobileMenu ? "opacity-0" : ""}`} />
+              <span className={`w-6 h-[2px] bg-white transition-all ${mobileMenu ? "-rotate-45 -translate-y-2" : ""}`} />
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* 📱 MOBILE MENU (CONNECTED DROPDOWN STYLE) */}
+      <div
+        className={`fixed left-1/2 -translate-x-1/2 z-40 overflow-hidden transition-all duration-500 ${
+          mobileMenu ? "opacity-100 max-h-[500px]" : "opacity-0 max-h-0"
+        } ${
+          scrolled ? "w-[80%] top-[70px]" : "w-full top-[60px]"
+        }`}
+      >
+        <div className="bg-gradient-to-br from-[#0f172a]/95 via-[#1e293b]/95 to-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-b-2xl">
+          
+          <div className="flex flex-col p-6 text-white gap-5 text-base">
+            
+            <a href="#about" onClick={() => setMobileMenu(false)}>About</a>
+
+            {/* SERVICES */}
+            <details className="group">
+              <summary className="cursor-pointer flex justify-between">
+                Services
+                <span className="group-open:rotate-180 transition">▾</span>
+              </summary>
+
+              <div className="mt-3 ml-2 flex flex-col gap-2 text-sm text-gray-300">
+                {SERVICES.map((s, i) => (
+                  <a
+                    key={i}
+                    href="#services"
+                    onClick={() => setMobileMenu(false)}
+                    className="hover:text-gold"
+                  >
+                    {s}
+                  </a>
+                ))}
+              </div>
+            </details>
+
+            <a href="#team" onClick={() => setMobileMenu(false)}>Team</a>
+            <a href="#contact" onClick={() => setMobileMenu(false)}>Contact</a>
+
+            <button className="mt-4 bg-gold text-black py-3 rounded-lg">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* OVERLAY */}
+      {mobileMenu && (
+        <div
+          onClick={() => setMobileMenu(false)}
+          className="fixed inset-0 bg-black/40 z-30"
+        />
+      )}
+    </>
+  );
+}

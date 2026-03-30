@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@theme {
+  --color-navy: #0B1F3A;
+  --color-royal: #1E3A8A;
+  --color-gold: #D4AF37;
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--color-gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+a, button {
+  cursor: pointer;
+}
