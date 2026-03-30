@@ -49,7 +49,7 @@ export default function Navbar() {
         <nav
           className={`transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
             scrolled
-              ? "mt-4 w-[80%] px-8 py-4 rounded-2xl bg-gradient-to-br from-[#0f172a]/80 via-[#1e293b]/80 to-black/80 backdrop-blur-xl border border-white/10 shadow-xl"
+              ? "mt-4 w-[90%] px-8 py-4 rounded-2xl bg-gradient-to-br from-[#0f172a]/80 via-[#1e293b]/80 to-black/80 backdrop-blur-xl border border-white/10 shadow-xl"
               : "w-full px-8 py-4 bg-transparent"
           }`}
         >
@@ -64,56 +64,58 @@ export default function Navbar() {
             </Link>
 
             {/* DESKTOP NAV */}
-            <div className="hidden md:flex flex-col items-start text-sm font-medium text-white">
+            <div className="hidden lg:flex flex-col items-start text-sm font-medium text-white">
               
               {/* TOP NAV ROW */}
               <div className="flex items-center gap-10">
                 <a href="#about" className="nav-link">About</a>
 
-                {/* SERVICES BUTTON */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setOpen(!open);
-                  }}
-                  className="nav-link flex items-center gap-1"
-                >
+               <div
+                className="relative"
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}
+              >
+                <button className="nav-link flex items-center gap-1">
                   Services <span className="text-xs">▾</span>
                 </button>
+
+                <div
+                  className={`absolute top-12 left-0 w-72 bg-navy rounded-xl shadow-2xl border border-white/10 transition-all duration-300 ${
+                    open
+                      ? "opacity-100 visible translate-y-0"
+                      : "opacity-0 invisible -translate-y-2"
+                  }`}
+                >
+                  <div className="p-2">
+                    {SERVICES.map((s, i) => (
+                      <a
+                        key={i}
+                        href="#services"
+                        className="block px-4 py-3 text-sm text-white hover:bg-white/10 hover:text-gold rounded-lg transition"
+                      >
+                        {s}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
                 <a href="#team" className="nav-link">Team</a>
                 <a href="#contact" className="nav-link">Contact</a>
               </div>
 
-              {/* 🔥 EXPANDABLE SERVICES (CONNECTED) */}
-              <div
-                className={`overflow-hidden transition-all duration-500 ${
-                  open ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="grid grid-cols-2 gap-2 text-sm text-white/80">
-                  {SERVICES.map((s, i) => (
-                    <a
-                      key={i}
-                      href="#services"
-                      className="px-3 py-2 rounded-lg hover:bg-white/10 transition"
-                    >
-                      {s}
-                    </a>
-                  ))}
-                </div>
-              </div>
+             
             </div>
 
             {/* CTA */}
-            <button className="hidden md:block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition">
+            <button className="hidden lg:block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition">
               Book Consultation
             </button>
 
             {/* HAMBURGER */}
             <button
               onClick={() => setMobileMenu(!mobileMenu)}
-              className="md:hidden flex flex-col gap-1.5 z-50"
+             className="lg:hidden flex flex-col flex-col gap-1.5 z-50"
               aria-label="Toggle Menu"
             >
               <span className={`w-6 h-[2px] bg-white transition-all ${mobileMenu ? "rotate-45 translate-y-2" : ""}`} />
@@ -129,7 +131,7 @@ export default function Navbar() {
         className={`fixed left-1/2 -translate-x-1/2 z-40 overflow-hidden transition-all duration-500 ${
           mobileMenu ? "opacity-100 max-h-[500px]" : "opacity-0 max-h-0"
         } ${
-          scrolled ? "w-[80%] top-[70px]" : "w-full top-[60px]"
+          scrolled ? "w-[90%] top-[70px]" : "w-full top-[60px]"
         }`}
       >
         <div className="bg-gradient-to-br from-[#0f172a]/95 via-[#1e293b]/95 to-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-b-2xl">

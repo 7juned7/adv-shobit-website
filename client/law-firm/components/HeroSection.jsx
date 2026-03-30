@@ -1,16 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-[100vh] flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-black text-white overflow-hidden">
+    <section className="relative w-full min-h-[100vh] flex items-start md:items-center pt-[100px] md:pt-[60px] bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-black text-white overflow-hidden">
       
-      {/* Glow */}
-      <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-blue-500/20 blur-[120px] rounded-full"></div>
-      <div className="absolute bottom-[-120px] right-[-100px] w-[300px] h-[300px] bg-purple-500/20 blur-[120px] rounded-full"></div>
+      {/* 🔥 MOBILE BACKGROUND IMAGE */}
+      <div className="absolute inset-0 md:hidden z-0">
+        <Image
+        width={200}
+        height={200}
+          src="/images/herosection/hero_section.png"
+          alt=""
+          className="w-full h-full object-cover opacity-60"
+        />
+        {/* overlay for readability */}
+        <div className="absolute inset-0 bg-black/70"></div>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      {/* Glow Effects */}
+      <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-yellow-500/20 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-[-120px] right-[-100px] w-[300px] h-[300px] bg-yellow-400/20 blur-[120px] rounded-full"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
         {/* LEFT CONTENT */}
         <motion.div
@@ -20,7 +34,7 @@ export default function HeroSection() {
         >
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             A Legacy of Justice <br />
-            <span className="text-blue-400">Since 1934</span>
+            <span className="text-yellow-400">Since 1934</span>
           </h1>
 
           <p className="mt-6 text-gray-300 text-lg max-w-lg">
@@ -28,11 +42,11 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-8 flex gap-4">
-            <button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-xl font-semibold">
+            <button className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black rounded-xl font-semibold transition">
               Book Consultation
             </button>
 
-            <button className="px-6 py-3 border border-gray-500 hover:border-white rounded-xl">
+            <button className="px-6 py-3 border border-gray-500 hover:border-yellow-400 rounded-xl transition">
               Explore Our Practice
             </button>
           </div>
@@ -43,32 +57,36 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* RIGHT IMAGE */}
+        {/* RIGHT IMAGE (DESKTOP ONLY) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center"
+          className="hidden md:flex justify-center"
         >
-          <img
-            src="/law-hero.png"
+          <Image
+          width={250}
+          height={250}
+            src="/images/herosection/hero_section.png"
             alt="Law Firm"
-            className="w-full max-w-md rounded-2xl shadow-2xl"
+            className="w-full max-w-md "
           />
         </motion.div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-  <svg
-    viewBox="0 0 1440 200"
-    className="w-full h-[120px]"
-    preserveAspectRatio="none"
-  >
-    <path
-      d="M0,100 C300,200 1100,0 1440,100 L1440,200 L0,200 Z"
-      fill="#ffffff" // match next section bg
-    />
-  </svg>
-</div>
+
+      {/* 🔥 CURVE (MATCH NEXT SECTION BG) */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+        <svg
+          viewBox="0 0 1440 320"
+          className="w-full h-[80px] sm:h-[120px] md:h-[160px] lg:h-[200px]"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,160 C360,280 1080,40 1440,160 L1440,320 L0,320 Z"
+            className="fill-[#ffffff]"
+          />
+        </svg>
+      </div>
     </section>
   );
 }
