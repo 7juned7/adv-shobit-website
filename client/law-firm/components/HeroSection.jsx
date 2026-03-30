@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-[100vh] flex items-start md:items-center pt-[100px] md:pt-[60px] bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-black text-white overflow-hidden">
+    <section className="relative w-full min-h-[100vh] flex items-start md:items-center pt-[140px] md:pt-[60px] bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-black text-white overflow-hidden">
       
       {/* 🔥 MOBILE BACKGROUND IMAGE */}
       <div className="absolute inset-0 md:hidden z-0">

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const SERVICES = [
   "Corporate Law",
@@ -56,12 +57,18 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             
             {/* LOGO */}
-            <Link
-              href="/"
-              className="text-white font-semibold text-lg md:text-xl tracking-wide"
-            >
-              Anurag Narain & Associates
-            </Link>
+         <Link href="/" className="flex items-center">
+  <Image
+  src="/images/logo/logo.png"
+  alt="Anurag Narain & Associates"
+  width={100}
+  height={100}
+  priority
+  className={`object-contain w-auto transition-all duration-500 ${
+    scrolled ? " h-18 md:h-24" : " h-24 md:h-40"
+  }`}
+/>
+</Link>
 
             {/* DESKTOP NAV */}
             <div className="hidden lg:flex flex-col items-start text-sm font-medium text-white">
