@@ -75,18 +75,18 @@ export default function HeroSection() {
       </div>
 
       {/* 🔥 CURVE (MATCH NEXT SECTION BG) */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
-        <svg
-          viewBox="0 0 1440 320"
-          className="w-full h-[80px] sm:h-[120px] md:h-[160px] lg:h-[200px]"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,160 C360,280 1080,40 1440,160 L1440,320 L0,320 Z"
-            className="fill-[#ffffff]"
-          />
-        </svg>
-      </div>
+     <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+  <svg
+    viewBox="0 0 1440 320"
+    className="w-full h-[80px] sm:h-[120px] md:h-[160px] lg:h-[200px]"
+    preserveAspectRatio="none"
+  >
+    <path
+      d="M0,160 C360,280 1080,40 1440,160 L1440,320 L0,320 Z"
+      className="fill-[#f8fafc]"
+    />
+  </svg>
+</div>
     </section>
   );
 }
