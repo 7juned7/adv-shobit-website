@@ -57,6 +57,18 @@ export default function HeroSection() {
           />
         </motion.div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    viewBox="0 0 1440 200"
+    className="w-full h-[120px]"
+    preserveAspectRatio="none"
+  >
+    <path
+      d="M0,100 C300,200 1100,0 1440,100 L1440,200 L0,200 Z"
+      fill="#ffffff" // match next section bg
+    />
+  </svg>
+</div>
     </section>
   );
 }
