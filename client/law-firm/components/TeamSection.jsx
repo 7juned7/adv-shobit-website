@@ -4,7 +4,7 @@ const TEAM = [
   {
     name: "Adv. Anurag Narain",
     role: "Founder & Head of Chambers",
-    image: "/images/team/adv-anurag.jpeg", // ✅ UPDATED PHOTO
+    image: "/images/team/Nachiketa-Narain.jpeg", // ✅ UPDATED PHOTO
     position: "center 20%",
     highlight: true,
   },
@@ -17,7 +17,7 @@ const TEAM = [
   {
     name: "Adv. Nachiketa Narain", // ✅ NEW ADD
     role: "Lawyer",
-    image: "/images/team/Nachiketa-Narain.jpeg", // 🔁 image add kar lena
+    image: "/images/team/Nachiketa-Nar.jpeg", // 🔁 image add kar lena
     position: "top",
   },
   {
