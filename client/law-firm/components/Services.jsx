@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import HowItWorks from "./HowItWorks";
 
 const SERVICES = [
   {
@@ -153,26 +154,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ⚙️ PROCESS */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-center mb-12">
-          How It Works
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-8 text-center">
-          {[
-            "Share your legal concerns with our team",
-            "We analyze and build a strategic plan",
-            "We guide you to resolution step by step",
-          ].map((step, i) => (
-            <div key={i} className="p-6 border rounded-xl">
-              <div className="text-yellow-500 font-bold mb-2">
-                0{i + 1}
-              </div>
-              <p className="text-gray-600">{step}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <HowItWorks/>
 
       {/* ⚖️ CTA */}
       <section className="text-center pb-24 px-6">
