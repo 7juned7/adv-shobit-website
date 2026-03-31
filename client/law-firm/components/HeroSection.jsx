@@ -10,9 +10,9 @@ export default function HeroSection() {
       {/* 🔥 MOBILE BACKGROUND IMAGE */}
       <div className="absolute inset-0 md:hidden z-0">
         <Image
-        width={200}
-        height={200}
-          src="/images/herosection/hero_section.png"
+        width={150}
+        height={150}
+          src="/images/herosection/justice-statue.png"
           alt=""
           className="w-full h-full object-cover opacity-60"
         />
@@ -67,7 +67,7 @@ export default function HeroSection() {
           <Image
           width={250}
           height={250}
-            src="/images/herosection/hero_section.png"
+            src="/images/herosection/justice-statue.png"
             alt="Law Firm"
             className="w-full max-w-md "
           />
