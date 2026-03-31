@@ -5,51 +5,56 @@ import { motion } from "framer-motion";
 const SERVICES = [
   {
     title: "Corporate Law",
-    desc: "Advising businesses on legal structures, compliance, and corporate governance.",
+    desc: "Business formation, contracts, compliance, and dispute resolution.",
     icon: "🏢",
   },
   {
     title: "Commercial Litigation",
-    desc: "Strategic representation in high-stakes disputes and litigation matters.",
+    desc: "Strategic representation in complex disputes and litigation.",
     icon: "⚖️",
   },
   {
     title: "Property Law",
-    desc: "Expert guidance on real estate transactions and property disputes.",
+    desc: "Handling real estate transactions and property disputes.",
     icon: "🏠",
   },
   {
     title: "Asset Protection",
-    desc: "Safeguarding wealth through structured legal planning and advisory.",
+    desc: "Wills, trusts, and estate planning to secure your future.",
     icon: "🛡️",
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <main className="bg-[#f8fafc] text-[#0f172a] relative overflow-hidden">
-      
-      {/* 🔥 subtle gradient glow */}
-     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_60%,rgba(234,179,8,0.08),transparent_70%)]"></div>
-      {/* 🔝 HERO */}
-      <section className="relative pt-[120px] pb-20 text-center px-6">
-        
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent mb-12"></div>
+    <main className="bg-[#f8fafc] text-[#0f172a]">
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl font-bold"
-        >
+      {/* 🔝 HERO */}
+      <section className="pt-[120px] pb-16 text-center px-6">
+        <h1 className="text-4xl md:text-5xl font-bold">
           Our Legal <span className="text-yellow-500">Services</span>
-        </motion.h1>
+        </h1>
 
         <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-          Delivering strategic legal solutions across a wide range of practice areas with precision, integrity, and nearly a century of trust.
+          Delivering strategic legal solutions with precision, integrity, and trust.
         </p>
       </section>
 
-      {/* 💼 SERVICES GRID */}
+      {/* 🏛 ABOUT */}
+      <section className="max-w-5xl mx-auto px-6 pb-20 text-center">
+        <h2 className="text-3xl font-semibold mb-6">
+          About <span className="text-yellow-500">Us</span>
+        </h2>
+
+        <p className="text-gray-600 leading-relaxed">
+          Founded in 1934, the Narain family has upheld a legacy of justice,
+          integrity, and intellect across generations. Under Advocate Anurag Narain,
+          a Civil Law expert with over 31 years of experience, the firm has evolved
+          into a multidisciplinary practice delivering trusted legal excellence.
+        </p>
+      </section>
+
+      {/* 💼 SERVICES */}
       <section className="relative max-w-7xl mx-auto px-6 pb-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {SERVICES.map((service, i) => (
           <motion.div
@@ -81,23 +86,109 @@ export default function ServicesPage() {
         ))}
       </section>
 
-      {/* ⚖️ CTA */}
-      <section className="relative text-center pb-28 px-6">
-        
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent mb-12"></div>
+      {/* 🏢 INDUSTRIES */}
+      <section className="relative py-16 overflow-hidden bg-[#020617] text-white">
 
-        <h2 className="text-3xl md:text-4xl font-semibold">
+  <div className="text-center mb-10">
+    <h2 className="text-3xl md:text-4xl font-semibold">
+      Industries <span className="text-yellow-400">We Serve</span>
+    </h2>
+  </div>
+
+  {/* SCROLLER */}
+  <div className="relative w-full overflow-hidden">
+
+    <div className="flex gap-6 animate-scroll whitespace-nowrap">
+
+      {[
+        "Corporate & Startups",
+        "Real Estate & Property",
+        "Healthcare & Medical",
+        "Finance & Banking",
+        "E-commerce",
+        "Entertainment & Media",
+        "Education & Institutions",
+        "Hospitality & Tourism",
+        "Manufacturing",
+        "Energy & Environment",
+        "Public Sector",
+        "Intellectual Property",
+      ]
+        .concat([
+          "Corporate & Startups",
+          "Real Estate & Property",
+          "Healthcare & Medical",
+          "Finance & Banking",
+          "E-commerce",
+          "Entertainment & Media",
+        ]) // duplicate for smooth loop
+        .map((item, i) => (
+          <div
+            key={i}
+            className="px-6 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-lg text-sm hover:border-yellow-400/40 transition"
+          >
+            {item}
+          </div>
+        ))}
+    </div>
+
+  </div>
+</section>
+
+      {/* 📊 STATS */}
+      <section className="py-20 text-center bg-[#020617] text-white">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          {[
+            ["1k+", "Satisfied Clients"],
+            ["900+", "Successful Cases"],
+            ["700+", "Legal Solutions"],
+            ["220+", "Trusted Partnerships"],
+          ].map(([num, label], i) => (
+            <div key={i}>
+              <h3 className="text-3xl font-bold text-yellow-400">{num}</h3>
+              <p className="text-gray-400 mt-2">{label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ⚙️ PROCESS */}
+      <section className="py-20 px-6 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-semibold text-center mb-12">
+          How It Works
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8 text-center">
+          {[
+            "Share your legal concerns with our team",
+            "We analyze and build a strategic plan",
+            "We guide you to resolution step by step",
+          ].map((step, i) => (
+            <div key={i} className="p-6 border rounded-xl">
+              <div className="text-yellow-500 font-bold mb-2">
+                0{i + 1}
+              </div>
+              <p className="text-gray-600">{step}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ⚖️ CTA */}
+      <section className="text-center pb-24 px-6">
+        <h2 className="text-3xl font-semibold">
           Need Legal Assistance?
         </h2>
 
         <p className="mt-4 text-gray-500">
-          Speak with our experts today and receive tailored legal guidance.
+          Speak with our experts today.
         </p>
 
-        <button className="mt-8 px-8 py-3 bg-yellow-500 text-black rounded-xl font-semibold hover:bg-yellow-600 transition shadow-lg shadow-yellow-500/20">
+        <button className="mt-8 px-8 py-3 bg-yellow-500 text-black rounded-xl font-semibold hover:bg-yellow-600 transition">
           Book Consultation
         </button>
       </section>
+
     </main>
   );
 }
