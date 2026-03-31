@@ -138,10 +138,10 @@ export default function Navbar() {
         className={`fixed left-1/2 -translate-x-1/2 z-40 overflow-hidden transition-all duration-500 ${
           mobileMenu ? "opacity-100 max-h-[500px]" : "opacity-0 max-h-0"
         } ${
-          scrolled ? "w-[90%] top-[70px]" : "w-full top-[60px]"
+          scrolled ? "w-[90%] top-[70px]" : "w-full top-[0px]"
         }`}
       >
-        <div className="bg-gradient-to-br from-[#0f172a]/95 via-[#1e293b]/95 to-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-b-2xl">
+        <div className="bg-gradient-to-br pt-30 from-[#0f172a]/95 via-[#1e293b]/95 to-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-b-2xl">
           
           <div className="flex flex-col p-6 text-white gap-5 text-base">
             
