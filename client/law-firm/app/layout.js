@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import WhatsAppButton from "@/components/WhatsAppButton";
 // import Footer from "@/components/Footer";
 
 import { Playfair_Display, Inter } from "next/font/google";
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${heading.variable} ${body.variable} font-body bg-white text-gray-900`}
       >
+        <WhatsAppButton/>
         <Navbar />
         <main>{children}</main>
         {/* <Footer /> */}

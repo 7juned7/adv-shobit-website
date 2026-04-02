@@ -4,38 +4,26 @@ const TEAM = [
   {
     name: "Adv. Anurag Narain",
     role: "Founder & Head of Chambers",
-    image: "/images/team/Nachiketa-Narain.jpeg", // ✅ UPDATED PHOTO
+    image: "/images/team/Anurag-Narain.jpeg", // 🔁 correct image lagana
     position: "center 20%",
     highlight: true,
   },
   {
-    name: "Adv. Chitrangda Narain",
+    name: "Adv. Shailendra Mishra",
     role: "Associate",
-    image: "/images/team/Chitrangda-Narain.jpeg",
+    image: "/images/team/shailendra.jpg",
     position: "top",
   },
   {
-    name: "Adv. Nachiketa Narain", // ✅ NEW ADD
-    role: "Lawyer",
-    image: "/images/team/Nachiketa-Nar.jpeg", // 🔁 image add kar lena
+    name: "Adv. Sudhanshu Tripathi",
+    role: "Associate",
+    image: "/images/team/sudhanshu.jpg", // 🔁 add image
     position: "top",
   },
   {
-    name: "Adv. Shobhit Verma",
+    name: "Adv. Pawan Kumar Verma",
     role: "Associate",
-    image: "/images/team/adv-Shobhit-Verma.jpeg",
-    position: "top",
-  },
-  {
-    name: "Adv. Vartika Pandey",
-    role: "Associate",
-    image: "/images/team/Vartika-Pandey.jpeg",
-    position: "top",
-  },
-  {
-    name: "Adv. Prashant Chaurasia",
-    role: "Associate",
-    image: "/images/team/prashant.jpg",
+    image: "/images/team/Pawan-Kumar-Verma.jpeg", // 🔁 add image
     position: "top",
   },
   {
@@ -45,10 +33,34 @@ const TEAM = [
     position: "top",
   },
   {
-    name: "Adv. Shailendra Mishra",
+    name: "Adv. Prashant Chaurasia",
     role: "Associate",
-    image: "/images/team/shailendra.jpg",
+    image: "/images/team/prashant.jpg",
     position: "top",
+  },
+  {
+    name: "Adv. Vartika Pandey",
+    role: "Associate",
+    image: "/images/team/Vartika-Pandey.jpeg",
+    position: "top",
+  },
+  {
+    name: "Adv. Chitrangda Narain",
+    role: "Associate",
+    image: "/images/team/Chitrangda-Narain.jpeg",
+    position: "top",
+  },
+  {
+    name: "Adv. Shobhit Verma",
+    role: "Associate",
+    image: "/images/team/adv-Shobhit-Verma.jpeg",
+    position: "top",
+  },
+  {
+    name: " Nachiketa Narain",
+    role: "Lawyer",
+    image: "/images/team/Nachiketa-Narain.jpeg",
+    position: "bottom",
   },
 ];
 
