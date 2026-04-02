@@ -2,7 +2,37 @@
 
 import { motion } from "framer-motion";
 import HowItWorks from "./HowItWorks";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
+function Counter({ value }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let start = 0;
+    const end = parseInt(value);
+    const duration = 1200;
+    const increment = end / (duration / 16);
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [isInView, value]);
+
+  return <span ref={ref}>{count}</span>;
+}
 const SERVICES = [
   {
     title: "Corporate Law",
@@ -33,7 +63,7 @@ export default function ServicesPage() {
       {/* 🔝 HERO */}
       <section className="pt-[120px] pb-16 text-center px-6">
         <h1 className="text-4xl md:text-5xl font-bold">
-          Our Legal <span className="text-yellow-500">Services</span>
+          Our Legal <span style={{ color: "var(--color-gold)" }}>Services</span>
         </h1>
 
         <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
@@ -41,135 +71,125 @@ export default function ServicesPage() {
         </p>
       </section>
 
-      {/* 🏛 ABOUT */}
-      <section className="max-w-5xl mx-auto px-6 pb-20 text-center">
-        <h2 className="text-3xl font-semibold mb-6">
-          About <span className="text-yellow-500">Us</span>
-        </h2>
-
-        <p className="text-gray-600 leading-relaxed">
-          Founded in 1934, the Narain family has upheld a legacy of justice,
-          integrity, and intellect across generations. Under Advocate Anurag Narain,
-          a Civil Law expert with over 31 years of experience, the firm has evolved
-          into a multidisciplinary practice delivering trusted legal excellence.
-        </p>
-      </section>
-
       {/* 💼 SERVICES */}
-      <section className="relative max-w-7xl mx-auto px-6 pb-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {SERVICES.map((service, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            viewport={{ once: true }}
-            className="group p-6 rounded-2xl bg-white/70 backdrop-blur-lg border border-black/5 shadow-sm hover:shadow-lg hover:shadow-yellow-500/10 transition duration-300 hover:-translate-y-2"
-          >
-            {/* icon */}
-            <div className="text-3xl mb-4 group-hover:scale-110 transition">
-              {service.icon}
-            </div>
+      <section className="relative w-full overflow-hidden bg-white">
+        <div className="max-w-7xl mx-auto px-6 pb-24 pt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            {/* title */}
-            <h3 className="text-xl font-semibold group-hover:text-yellow-500 transition">
-              {service.title}
-            </h3>
+          {SERVICES.map((service, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="group p-6 rounded-2xl bg-white/70 backdrop-blur-lg border border-black/5 shadow-sm hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] transition duration-300 hover:-translate-y-2"
+            >
+              <div className="text-3xl mb-4 group-hover:scale-110 transition">
+                {service.icon}
+              </div>
 
-            {/* desc */}
-            <p className="mt-3 text-gray-500 text-sm leading-relaxed">
-              {service.desc}
-            </p>
+              <h3 className="text-xl font-semibold group-hover:text-[color:var(--color-gold)] transition">
+                {service.title}
+              </h3>
 
-            {/* hover line */}
-            <div className="mt-6 h-[2px] w-0 bg-yellow-500 group-hover:w-full transition-all duration-300"></div>
-          </motion.div>
-        ))}
+              <p className="mt-3 text-gray-500 text-sm leading-relaxed">
+                {service.desc}
+              </p>
+
+              <div
+                className="mt-6 h-[2px] w-0 group-hover:w-full transition-all duration-300"
+                style={{ background: "var(--color-gold)" }}
+              />
+            </motion.div>
+          ))}
+
+        </div>
       </section>
 
       {/* 🏢 INDUSTRIES */}
       <section className="relative py-16 overflow-hidden bg-[#020617] text-white">
 
-  <div className="text-center mb-10">
-    <h2 className="text-3xl md:text-4xl font-semibold">
-      Industries <span className="text-yellow-400">We Serve</span>
-    </h2>
-  </div>
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-semibold">
+            Industries <span style={{ color: "var(--color-gold)" }}>We Serve</span>
+          </h2>
+        </div>
 
-  {/* SCROLLER */}
-  <div className="relative w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden">
+          <div className="flex gap-6 animate-scroll whitespace-nowrap">
 
-    <div className="flex gap-6 animate-scroll whitespace-nowrap">
+            {[
+              "Corporate & Startups",
+              "Real Estate & Property",
+              "Healthcare & Medical",
+              "Finance & Banking",
+              "E-commerce",
+              "Entertainment & Media",
+              "Education & Institutions",
+              "Hospitality & Tourism",
+              "Manufacturing",
+              "Energy & Environment",
+              "Public Sector",
+              "Intellectual Property",
+              "Corporate & Startups",
+              "Real Estate & Property",
+              "Healthcare & Medical",
+              "Finance & Banking",
+              "E-commerce",
+              "Entertainment & Media",
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="px-6 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-lg text-sm hover:border-[color:var(--color-gold)]/40 transition"
+              >
+                {item}
+              </div>
+            ))}
 
-      {[
-        "Corporate & Startups",
-        "Real Estate & Property",
-        "Healthcare & Medical",
-        "Finance & Banking",
-        "E-commerce",
-        "Entertainment & Media",
-        "Education & Institutions",
-        "Hospitality & Tourism",
-        "Manufacturing",
-        "Energy & Environment",
-        "Public Sector",
-        "Intellectual Property",
-      ]
-        .concat([
-          "Corporate & Startups",
-          "Real Estate & Property",
-          "Healthcare & Medical",
-          "Finance & Banking",
-          "E-commerce",
-          "Entertainment & Media",
-        ]) // duplicate for smooth loop
-        .map((item, i) => (
-          <div
-            key={i}
-            className="px-6 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-lg text-sm hover:border-yellow-400/40 transition"
-          >
-            {item}
           </div>
-        ))}
-    </div>
-
-  </div>
-</section>
-
-      {/* 📊 STATS */}
-      <section className="py-20 text-center bg-[#020617] text-white">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-          {[
-            ["1k+", "Satisfied Clients"],
-            ["900+", "Successful Cases"],
-            ["700+", "Legal Solutions"],
-            ["220+", "Trusted Partnerships"],
-          ].map(([num, label], i) => (
-            <div key={i}>
-              <h3 className="text-3xl font-bold text-yellow-400">{num}</h3>
-              <p className="text-gray-400 mt-2">{label}</p>
-            </div>
-          ))}
         </div>
       </section>
 
+      {/* 📊 STATS */}
+      <section className="py-20 text-center bg-[#020617] text-white">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+    {[
+      ["1000+", "Satisfied Clients"],
+      ["900+", "Successful Cases"],
+      ["700+", "Legal Solutions"],
+      ["220+", "Trusted Partnerships"],
+    ].map(([num, label], i) => (
+      <div key={i}>
+        <h3 style={{ color: "var(--color-gold)" }} className="text-3xl font-bold">
+          <Counter value={num.replace("+", "")} />+
+        </h3>
+        <p className="text-gray-400 mt-2">{label}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+      {/* 🔥 CURVE AFTER STATS */}
+      <div className="relative bg-[#020617]">
+        <div className="absolute bottom-0 left-0 w-full leading-none pointer-events-none">
+          <svg
+            viewBox="0 0 1440 320"
+            className="w-full h-[100px] md:h-[160px]"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,200 C360,100 1080,300 1440,180 L1440,320 L0,320 Z"
+              fill="#fffdf7"
+            />
+          </svg>
+        </div>
+      </div>
+
       {/* ⚙️ PROCESS */}
-      <HowItWorks/>
+      <HowItWorks />
 
       {/* ⚖️ CTA */}
-      <section className="text-center pb-24 px-6">
-        <h2 className="text-3xl font-semibold">
-          Need Legal Assistance?
-        </h2>
-
-        <p className="mt-4 text-gray-500">
-          Speak with our experts today.
-        </p>
-
-        <button className="mt-8 px-8 py-3 bg-yellow-500 text-black rounded-xl font-semibold hover:bg-yellow-600 transition">
-          Book Consultation
-        </button>
-      </section>
+      
 
     </main>
   );

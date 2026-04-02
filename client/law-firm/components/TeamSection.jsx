@@ -54,7 +54,7 @@ const TEAM = [
 
 export default function TeamSection() {
   return (
-    <section className="py-20 px-4 bg-[#020617] text-white">
+    <section className="py-20 px-4 bg-navy text-white">
 
       {/* HEADER */}
       <div className="text-center mb-10">

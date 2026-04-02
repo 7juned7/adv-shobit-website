@@ -17,22 +17,16 @@ export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   // 🔥 Scroll detection
-  useEffect(() => {
-    let ticking = false;
+ useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 60);
+  };
 
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setScrolled(window.scrollY > 60);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
+  handleScroll(); // ✅ THIS LINE FIXES REFRESH ISSUE
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   // 🔥 Close dropdown on outside click
   useEffect(() => {
@@ -50,8 +44,8 @@ export default function Navbar() {
         <nav
           className={`transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
             scrolled
-              ? "mt-4 w-[90%] px-8 py-4 rounded-2xl bg-gradient-to-br from-[#0f172a]/80 via-[#1e293b]/80 to-black/80 backdrop-blur-xl border border-white/10 shadow-xl"
-              : "w-full px-8 py-4 bg-transparent"
+              ? "mt-4 w-[90%] px-4 py-2 rounded-2xl bg-gradient-to-br from-[#0f172a]/80 via-[#1e293b]/80 to-black/80 backdrop-blur-xl border border-white/10 shadow-xl"
+              : "w-full px-8 py-2 bg-transparent"
           }`}
         >
           <div className="flex items-center justify-between">
