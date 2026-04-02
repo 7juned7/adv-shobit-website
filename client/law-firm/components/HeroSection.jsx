@@ -42,9 +42,14 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-8 flex gap-4">
-            <button className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black rounded-xl font-semibold transition">
-              Book Consultation
-            </button>
+            <a
+  href="https://wa.me/918009099837"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden lg:inline-block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition"
+>
+  Book Consultation
+</a>
 
             <button className="px-6 py-3 border border-gray-500 hover:border-yellow-400 rounded-xl transition">
               Explore Our Practice

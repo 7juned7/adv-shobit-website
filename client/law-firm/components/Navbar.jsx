@@ -109,9 +109,14 @@ export default function Navbar() {
             </div>
 
             {/* CTA */}
-            <button className="hidden lg:block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition">
-              Book Consultation
-            </button>
+          <a
+  href="https://wa.me/918009099837"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden lg:inline-block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition"
+>
+  Book Consultation
+</a>
 
             {/* HAMBURGER */}
             <button
@@ -165,9 +170,14 @@ export default function Navbar() {
             <a href="#team" onClick={() => setMobileMenu(false)}>Team</a>
             <a href="#contact" onClick={() => setMobileMenu(false)}>Contact</a>
 
-            <button className="mt-4 bg-gold text-black py-3 rounded-lg">
-              Book Consultation
-            </button>
+           <a
+  href="https://wa.me/918009099837"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden lg:inline-block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition"
+>
+  Book Consultation
+</a>
           </div>
         </div>
       </div>

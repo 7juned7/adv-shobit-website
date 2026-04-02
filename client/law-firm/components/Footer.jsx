@@ -83,15 +83,23 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="border-t border-white/10 mt-16 py-6 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-white/50 gap-2">
+      <div className="border-t border-white/10 mt-16 px-6 py-6 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-white/50 gap-2">
 
         <p>
           © {new Date().getFullYear()} Anurag Narain & Associates
         </p>
 
-        <p>
-          Built with precision & integrity
-        </p>
+        <p className="text-sm text-gray-400">
+  Built with precision & integrity by{" "}
+  <a
+    href="https://webjuncture.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gold hover:underline"
+  >
+    Webjuncture
+  </a>
+</p>
       </div>
 
     </footer>

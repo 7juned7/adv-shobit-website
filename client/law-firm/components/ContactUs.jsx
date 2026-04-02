@@ -78,7 +78,7 @@ export default function Contact() {
         </div>
 
         {/* RIGHT (FORM - SAME AS BEFORE) */}
-       <div className="relative border rounded-2xl p-8 bg-gradient-to-br from-[var(--color-navy)]/30 via-[#0B1F3A]/70 to-[var(--color-navy)]/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.4)] text-white">
+       <div className="relative border rounded-2xl p-8 bg-gradient-to-br from-[var(--color-navy)]/90 via-[#0B1F3A]/70 to-[var(--color-navy)]/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.4)] text-white">
 
   {/* 🔥 subtle inner glow */}
   <div className="absolute inset-0 rounded-2xl pointer-events-none bg-gradient-to-br from-white/5 to-transparent" />

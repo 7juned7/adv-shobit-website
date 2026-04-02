@@ -109,18 +109,18 @@ export default function TeamSection() {
       </div>
 
       {/* MOBILE CAROUSEL */}
-      <div className="md:hidden overflow-x-auto flex gap-4 px-2 snap-x snap-mandatory scroll-smooth">
+      <div className="md:hidden overflow-x-auto no-scrollbar flex gap-4 px-2 snap-x snap-mandatory scroll-smooth">
 
-        {TEAM.map((member, index) => (
-          <div
-            key={index}
-            className="snap-center shrink-0 w-[75%]"
-          >
-            <Card member={member} />
-          </div>
-        ))}
+  {TEAM.map((member, index) => (
+    <div
+      key={index}
+      className="snap-center shrink-0 w-[75%]"
+    >
+      <Card member={member} />
+    </div>
+  ))}
 
-      </div>
+</div>
     </section>
   );
 }
