@@ -5,9 +5,7 @@ export default function Footer() {
     <footer className="bg-navy text-white pt-20 px-6 border-t border-white/10">
 
       {/* MAIN GRID */}
-      <div className="max-w-7xl mx-auto grid gap-12 
-        sm:grid-cols-2 
-        lg:grid-cols-4">
+      <div className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
 
         {/* ABOUT */}
         <div>
@@ -85,10 +83,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="border-t border-white/10 mt-16 py-6 
-        flex flex-col sm:flex-row 
-        justify-between items-center 
-        text-xs sm:text-sm text-white/50 gap-2">
+      <div className="border-t border-white/10 mt-16 py-6 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-white/50 gap-2">
 
         <p>
           © {new Date().getFullYear()} Anurag Narain & Associates

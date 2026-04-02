@@ -81,8 +81,7 @@ export default function Contact() {
        <div className="relative border rounded-2xl p-8 bg-gradient-to-br from-[var(--color-navy)]/30 via-[#0B1F3A]/70 to-[var(--color-navy)]/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.4)] text-white">
 
   {/* 🔥 subtle inner glow */}
-  <div className="absolute inset-0 rounded-2xl pointer-events-none 
-    bg-gradient-to-br from-white/5 to-transparent" />
+  <div className="absolute inset-0 rounded-2xl pointer-events-none bg-gradient-to-br from-white/5 to-transparent" />
 
   <form
     onSubmit={(e) => {
@@ -123,8 +122,7 @@ export default function Contact() {
 
     <button
       type="submit"
-      className="mt-4 border border-gold text-gold py-3 rounded-lg 
-      hover:bg-gold hover:text-black transition duration-300"
+      className="mt-4 border border-gold text-gold py-3 rounded-lg  hover:bg-gold hover:text-black transition duration-300"
     >
       Request Consultation
     </button>

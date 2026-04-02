@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import HowItWorks from "./HowItWorks";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import Image from "next/image";
 function Counter({ value }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -37,22 +38,22 @@ const SERVICES = [
   {
     title: "Corporate Law",
     desc: "Business formation, contracts, compliance, and dispute resolution.",
-    icon: "🏢",
+    icon: "/images/service/corporate.png",
   },
   {
     title: "Commercial Litigation",
     desc: "Strategic representation in complex disputes and litigation.",
-    icon: "⚖️",
+    icon: "/images/service/commercial.png",
   },
   {
     title: "Property Law",
     desc: "Handling real estate transactions and property disputes.",
-    icon: "🏠",
+    icon: "/images/service/prop-law.png",
   },
   {
     title: "Asset Protection",
     desc: "Wills, trusts, and estate planning to secure your future.",
-    icon: "🛡️",
+    icon: "/images/service/asset-icon.jpg",
   },
 ];
 
@@ -85,7 +86,12 @@ export default function ServicesPage() {
               className="group p-6 rounded-2xl bg-white/70 backdrop-blur-lg border border-black/5 shadow-sm hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] transition duration-300 hover:-translate-y-2"
             >
               <div className="text-3xl mb-4 group-hover:scale-110 transition">
-                {service.icon}
+             <Image
+  src={service.icon}
+  alt={service.title}
+  width={58}
+  height={58}
+/>
               </div>
 
               <h3 className="text-xl font-semibold group-hover:text-[color:var(--color-gold)] transition">
