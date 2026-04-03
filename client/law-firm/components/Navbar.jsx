@@ -69,7 +69,7 @@ export default function Navbar() {
               
               {/* TOP NAV ROW */}
               <div className="flex items-center gap-10">
-                <a href="about" className="nav-link">About</a>
+                <a href="/about" className="nav-link">About</a>
 
                <div
                 className="relative"
@@ -145,7 +145,7 @@ export default function Navbar() {
           
           <div className="flex flex-col p-6 text-[color:var(--color-gold)] gap-5 text-base">
             
-            <a href="about" onClick={() => setMobileMenu(false)}>About</a>
+            <a href="/about" onClick={() => setMobileMenu(false)}>About</a>
 
             {/* SERVICES */}
             <details className="group">
