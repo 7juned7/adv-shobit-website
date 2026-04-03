@@ -11,7 +11,7 @@ const TEAM = [
   {
     name: "Adv. Shailendra Mishra",
     role: "Associate",
-    image: "/images/team/shailendra.jpg",
+    image: "/images/team/Shailendra-Misra.jpeg",
     position: "top",
   },
   {
