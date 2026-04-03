@@ -5,10 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const SERVICES = [
-  "Corporate Law",
-  "Commercial Litigation",
-  "Property Law",
-  "Asset Protection",
+  { name: "Corporate Law", slug: "corporate-law" },
+  { name: "Commercial Litigation", slug: "commercial-litigation" },
+  { name: "Property Law", slug: "property-law" },
+  { name: "Asset Protection", slug: "asset-protection" },
 ];
 
 export default function Navbar() {
@@ -65,11 +65,11 @@ export default function Navbar() {
 </Link>
 
             {/* DESKTOP NAV */}
-            <div className="hidden lg:flex flex-col items-start text-sm font-medium text-white">
+            <div className="hidden lg:flex flex-col items-start text-sm font-medium text-[color:var(--color-gold)]">
               
               {/* TOP NAV ROW */}
               <div className="flex items-center gap-10">
-                <a href="#about" className="nav-link">About</a>
+                <a href="about" className="nav-link">About</a>
 
                <div
                 className="relative"
@@ -77,7 +77,8 @@ export default function Navbar() {
                 onMouseLeave={() => setOpen(false)}
               >
                 <button className="nav-link flex items-center gap-1">
-                  Services <span className="text-xs">▾</span>
+                  <a href="services" className="nav-link">Service</a>
+ <span className="text-xs">▾</span>
                 </button>
 
                 <div
@@ -89,20 +90,20 @@ export default function Navbar() {
                 >
                   <div className="p-2">
                     {SERVICES.map((s, i) => (
-                      <a
-                        key={i}
-                        href="#services"
-                        className="block px-4 py-3 text-sm text-white hover:bg-white/10 hover:text-gold rounded-lg transition"
-                      >
-                        {s}
-                      </a>
-                    ))}
+  <Link
+    key={i}
+    href={`/services/${s.slug}`}
+    className="block px-4 py-3 text-sm text-white hover:bg-white/10 hover:text-[color:var(--color-gold)] rounded-lg transition"
+  >
+    {s.name}   {/* ✅ FIX */}
+  </Link>
+))}
                   </div>
                 </div>
               </div>
 
-                <a href="#team" className="nav-link">Team</a>
-                <a href="#contact" className="nav-link">Contact</a>
+                <a href="/team" className="nav-link">Team</a>
+                <a href="/contact" className="nav-link">Contact</a>
               </div>
 
              
@@ -124,9 +125,9 @@ export default function Navbar() {
              className="lg:hidden flex flex-col flex-col gap-1.5 z-50"
               aria-label="Toggle Menu"
             >
-              <span className={`w-6 h-[2px] bg-white transition-all ${mobileMenu ? "rotate-45 translate-y-2" : ""}`} />
-              <span className={`w-6 h-[2px] bg-white transition-all ${mobileMenu ? "opacity-0" : ""}`} />
-              <span className={`w-6 h-[2px] bg-white transition-all ${mobileMenu ? "-rotate-45 -translate-y-2" : ""}`} />
+              <span className={`w-6 h-[2px] bg-[color:var(--color-gold)] transition-all ${mobileMenu ? "rotate-45 translate-y-2" : ""}`} />
+              <span className={`w-6 h-[2px] bg-[color:var(--color-gold)] transition-all ${mobileMenu ? "opacity-0" : ""}`} />
+              <span className={`w-6 h-[2px] bg-[color:var(--color-gold)] transition-all ${mobileMenu ? "-rotate-45 -translate-y-2" : ""}`} />
             </button>
           </div>
         </nav>
@@ -142,33 +143,33 @@ export default function Navbar() {
       >
         <div className="bg-gradient-to-br pt-30 from-[#0f172a]/95 via-[#1e293b]/95 to-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-b-2xl">
           
-          <div className="flex flex-col p-6 text-white gap-5 text-base">
+          <div className="flex flex-col p-6 text-[color:var(--color-gold)] gap-5 text-base">
             
-            <a href="#about" onClick={() => setMobileMenu(false)}>About</a>
+            <a href="about" onClick={() => setMobileMenu(false)}>About</a>
 
             {/* SERVICES */}
             <details className="group">
               <summary className="cursor-pointer flex justify-between">
-                Services
+                 <a href="services" className="nav-link">Services</a>
+
                 <span className="group-open:rotate-180 transition">▾</span>
               </summary>
 
               <div className="mt-3 ml-2 flex flex-col gap-2 text-sm text-gray-300">
                 {SERVICES.map((s, i) => (
-                  <a
-                    key={i}
-                    href="#services"
-                    onClick={() => setMobileMenu(false)}
-                    className="hover:text-gold"
-                  >
-                    {s}
-                  </a>
-                ))}
+  <Link
+    key={i}
+    href={`/services/${s.slug}`}
+    className="block px-4 py-3 text-sm text-[color:var(--color-gold)] hover:bg-white/10 hover:text-[color:var(--color-gold)] rounded-lg transition"
+  >
+    {s.name}   {/* ✅ FIX */}
+  </Link>
+))}
               </div>
             </details>
 
-            <a href="#team" onClick={() => setMobileMenu(false)}>Team</a>
-            <a href="#contact" onClick={() => setMobileMenu(false)}>Contact</a>
+            <a href="/team" onClick={() => setMobileMenu(false)}>Team</a>
+            <a href="/contact" onClick={() => setMobileMenu(false)}>Contact</a>
 
            <a
   href="https://wa.me/918009099837"

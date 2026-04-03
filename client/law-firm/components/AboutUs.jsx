@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section className="relative bg-[#f8fafc] py-24 overflow-hidden">
+    <section className="relative bg-[#f8fafc] py-44 overflow-hidden">
       
       {/* subtle gold glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,179,8,0.06),transparent_70%)]"></div>

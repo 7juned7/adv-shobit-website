@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-28 px-6 font-body overflow-hidden"
+      className="relative py-48 px-6 font-body overflow-hidden"
       style={{
         background: `
           radial-gradient(circle at 50% 0%, rgba(212,175,55,0.12), transparent 60%),

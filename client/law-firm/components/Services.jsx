@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import HowItWorks from "./HowItWorks";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
 function Counter({ value }) {
   const ref = useRef(null);
@@ -37,21 +38,25 @@ function Counter({ value }) {
 const SERVICES = [
   {
     title: "Corporate Law",
+    slug: "corporate-law",
     desc: "Business formation, contracts, compliance, and dispute resolution.",
     icon: "/images/service/corporate.png",
   },
   {
     title: "Commercial Litigation",
+    slug: "commercial-litigation",
     desc: "Strategic representation in complex disputes and litigation.",
     icon: "/images/service/commercial.png",
   },
   {
     title: "Property Law",
+    slug: "property-law",
     desc: "Handling real estate transactions and property disputes.",
     icon: "/images/service/prop-law.png",
   },
   {
     title: "Asset Protection",
+    slug: "asset-protection",
     desc: "Wills, trusts, and estate planning to secure your future.",
     icon: "/images/service/asset-icon.jpg",
   },
@@ -77,14 +82,14 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-6 pb-24 pt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {SERVICES.map((service, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="group p-6 rounded-2xl bg-white/70 backdrop-blur-lg border border-black/5 shadow-sm hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] transition duration-300 hover:-translate-y-2"
-            >
+  <Link key={i} href={`/services/${service.slug}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: i * 0.1 }}
+      viewport={{ once: true }}
+      className="cursor-pointer group p-6 rounded-2xl bg-white/70 backdrop-blur-lg border border-black/5 shadow-sm hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] transition duration-300 hover:-translate-y-2"
+    >
               <div className="text-3xl mb-4 group-hover:scale-110 transition">
              <Image
   src={service.icon}
@@ -107,6 +112,7 @@ export default function ServicesPage() {
                 style={{ background: "var(--color-gold)" }}
               />
             </motion.div>
+            </Link>
           ))}
 
         </div>
