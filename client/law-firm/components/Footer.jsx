@@ -43,43 +43,63 @@ export default function Footer() {
 
         {/* CONTACT + MAP */}
         <div>
-          <h3 className="font-heading text-lg mb-4 text-gold">Contact</h3>
+  <h3 className="font-heading text-lg mb-4 text-gold">Contact</h3>
 
-          {/* FLEX RESPONSIVE BLOCK */}
-          <div className="flex flex-col gap-6">
+  <div className="flex flex-col gap-6">
 
-            {/* INFO */}
-            <div className="space-y-2 text-sm text-white/70">
-              <p className="font-medium text-white/90">Lucknow High Court</p>
-              <p>Chamber: C Block-215</p>
-              <p>+91 8090023364</p>
-              <p>advo.anuragn@gmail.com</p>
+    {/* INFO */}
+    <div className="space-y-2 text-sm text-white/70">
+      <p className="font-medium text-white/90">Lucknow High Court</p>
+      <p>Chamber: C-215, New High Court</p>
+      <p>Gomti Nagar, Lucknow</p>
 
-              {/* ACTION LINKS */}
-              <div className="flex flex-wrap gap-4 mt-3 text-xs">
-                <a href="https://wa.me/918090023364" target="_blank" className="hover:text-gold transition">
-                  WhatsApp
-                </a>
-                <a href="tel:+918090023364" className="hover:text-gold transition">
-                  Call
-                </a>
-                <a href="mailto:advo.anuragn@gmail.com" className="hover:text-gold transition">
-                  Email
-                </a>
-              </div>
-            </div>
+      <p className="mt-2">
+        +91 9415180711 <br />
+        +91 8090023364
+      </p>
 
-            {/* MAP */}
-            <div className="rounded-xl overflow-hidden border border-white/10">
-              <iframe
-                src="https://www.google.com/maps?q=Lucknow High Court&output=embed"
-                className="w-full h-[160px] sm:h-[180px] md:h-[200px]"
-                loading="lazy"
-              ></iframe>
-            </div>
+      <p>
+        advo.anurag@gmail.com <br />
+        lawnurag@yahoo.com
+      </p>
 
-          </div>
-        </div>
+      {/* ACTION LINKS */}
+      <div className="flex flex-wrap gap-4 mt-3 text-xs">
+        <a
+          href="https://wa.me/919415180711"
+          target="_blank"
+          className="hover:text-gold transition"
+        >
+          WhatsApp
+        </a>
+
+        <a
+          href="tel:+919415180711"
+          className="hover:text-gold transition"
+        >
+          Call
+        </a>
+
+        <a
+          href="mailto:advo.anurag@gmail.com"
+          className="hover:text-gold transition"
+        >
+          Email
+        </a>
+      </div>
+    </div>
+
+    {/* MAP */}
+    <div className="rounded-xl overflow-hidden border border-white/10">
+      <iframe
+        src="https://www.google.com/maps?q=Lucknow High Court, Lucknow&output=embed"
+        className="w-full h-[160px] sm:h-[180px] md:h-[200px]"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+  </div>
+</div>
       </div>
 
       {/* BOTTOM BAR */}

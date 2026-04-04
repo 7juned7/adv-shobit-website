@@ -7,7 +7,7 @@ const SERVICE_DETAILS = {
     title: "Corporate Law",
     description:
       "We provide end-to-end corporate legal services including company formation, compliance, contracts, and dispute resolution for businesses in Lucknow and across India.",
-    image: "/images/service/corporate.png",
+    image: "/images/service/corporate_law_image.jpg",
     points: [
       "Company Registration & Structuring",
       "Contract Drafting & Review",
@@ -20,7 +20,7 @@ const SERVICE_DETAILS = {
     title: "Commercial Litigation",
     description:
       "Expert legal representation in commercial disputes, arbitration, and litigation matters for businesses in Lucknow.",
-    image: "/images/service/commercial.png",
+    image: "/images/service/commercial_image.jpeg",
     points: [
       "Business Disputes",
       "Contract Enforcement",
@@ -33,7 +33,7 @@ const SERVICE_DETAILS = {
     title: "Property Law",
     description:
       "Comprehensive legal services for property transactions, disputes, and documentation in Lucknow.",
-    image: "/images/service/prop-law.png",
+    image: "/images/service/property_law_image.jpg",
     points: [
       "Property Documentation",
       "Title Verification",
@@ -46,7 +46,7 @@ const SERVICE_DETAILS = {
     title: "Asset Protection",
     description:
       "Secure your assets with wills, trusts, and estate planning services in Lucknow.",
-    image: "/images/service/asset-icon.jpg",
+    image: "/images/service/asset_protection_image.jpg",
     points: [
       "Will Drafting",
       "Trust Planning",
@@ -54,6 +54,31 @@ const SERVICE_DETAILS = {
       "Wealth Protection",
     ],
   },
+  "criminal-law": {
+  title: "Criminal Law",
+  description:
+    "Expert legal representation in criminal matters including bail, trials, and appeals before courts in Lucknow.",
+  image: "/images/service/criminal_law_image.jpg",
+  points: [
+    "Bail Applications",
+    "Criminal Trials",
+    "Appeals & Revisions",
+    "White Collar Crimes",
+  ],
+},
+
+"service-law": {
+  title: "Service Law",
+  description:
+    "Professional assistance in service-related disputes including disciplinary actions, employment issues, and tribunal matters.",
+  image: "/images/service/service_law_image.jpg",
+  points: [
+    "Employment Disputes",
+    "Departmental Inquiries",
+    "Service Tribunal Cases",
+    "Pension & Benefits Matters",
+  ],
+},
 };
 
 // ✅ 🔥 DYNAMIC SEO

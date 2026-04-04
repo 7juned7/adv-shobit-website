@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -42,19 +43,19 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-8 flex gap-4">
-            <a
-  href="https://wa.me/918009099837"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hidden lg:inline-block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition"
->
-  Book Consultation
-</a>
+  <a
+    href="https://wa.me/918009099837"
+    target="_blank"
+    rel="noopener noreferrer"
+    className=" lg:inline-block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition"
+  >
+    Book Consultation
+  </a>
 
-            <button className="px-6 py-3 border border-gray-500 hover:border-yellow-400 rounded-xl transition">
-              Explore Our Practice
-            </button>
-          </div>
+  <Link href="/services" className="px-6 py-3 border border-gray-500 hover:border-yellow-400 rounded-xl transition">
+    Explore Our Practice
+  </Link>
+</div>
 
           {/* TRUST BADGE */}
           <div className="mt-10 text-sm text-gray-400">

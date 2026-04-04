@@ -9,6 +9,8 @@ const SERVICES = [
   { name: "Commercial Litigation", slug: "commercial-litigation" },
   { name: "Property Law", slug: "property-law" },
   { name: "Asset Protection", slug: "asset-protection" },
+  { name: "Criminal Law", slug: "criminal-law" },
+  { name: "Service Law", slug: "service-law" },
 ];
 
 export default function Navbar() {
@@ -69,6 +71,7 @@ export default function Navbar() {
               
               {/* TOP NAV ROW */}
               <div className="flex items-center gap-10">
+                <a href="/" className="nav-link">Home</a>
                 <a href="/about" className="nav-link">About</a>
 
                <div
@@ -136,15 +139,15 @@ export default function Navbar() {
       {/* 📱 MOBILE MENU (CONNECTED DROPDOWN STYLE) */}
       <div
         className={`fixed left-1/2 -translate-x-1/2 z-40 overflow-hidden transition-all duration-500 ${
-          mobileMenu ? "opacity-100 max-h-[500px]" : "opacity-0 max-h-0"
+          mobileMenu ? "opacity-100 " : "opacity-0 max-h-0"
         } ${
-          scrolled ? "w-[90%] top-[70px]" : "w-full top-[0px]"
+          scrolled ? "w-[89%] top-[40px]" : "w-full top-[0px]"
         }`}
       >
         <div className="bg-gradient-to-br pt-30 from-[#0f172a]/95 via-[#1e293b]/95 to-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-b-2xl">
           
           <div className="flex flex-col p-6 text-[color:var(--color-gold)] gap-5 text-base">
-            
+            <a href="/" onClick={() => setMobileMenu(false)}>Home</a>
             <a href="/about" onClick={() => setMobileMenu(false)}>About</a>
 
             {/* SERVICES */}

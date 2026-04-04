@@ -33,27 +33,44 @@ export default function Contact() {
 
           {/* INFO */}
           <div className="space-y-8 text-sm">
-            <div>
-              <p className="text-black/40 mb-1">Office</p>
-              <p className="text-black/90">New Delhi, India</p>
-            </div>
+  <div>
+    <p className="text-black/40 mb-1">Office</p>
+    <p className="text-black/90">
+      Chamber: C-215, New High Court <br />
+      Lucknow High Court, India
+    </p>
+  </div>
 
-            <div>
-              <p className="text-black/40 mb-1">Phone</p>
-              <p className="text-black/90">+91 98765 43210</p>
-            </div>
+  <div>
+    <p className="text-black/40 mb-1">Address</p>
+    <p className="text-black/90">
+      5/1114 Viram Khand 5, <br />
+      Gomti Nagar, Lucknow
+    </p>
+  </div>
 
-            <div>
-              <p className="text-black/40 mb-1">Email</p>
-              <p className="text-black/90">contact@anuragnarain.com</p>
-            </div>
-          </div>
+  <div>
+    <p className="text-black/40 mb-1">Phone</p>
+    <p className="text-black/90">
+      +91 9415180711 <br />
+      +91 8090023364
+    </p>
+  </div>
+
+  <div>
+    <p className="text-black/40 mb-1">Email</p>
+    <p className="text-black/90">
+      advo.anurag@gmail.com <br />
+      lawnurag@yahoo.com
+    </p>
+  </div>
+</div>
 
           {/* ACTION LINKS */}
           <div className="flex gap-6 mt-10 text-sm">
 
             <a
-              href="https://wa.me/919876543210"
+             href="https://wa.me/919415180711"
               target="_blank"
               className="text-black/70 hover:text-gold transition"
             >
@@ -61,14 +78,14 @@ export default function Contact() {
             </a>
 
             <a
-              href="tel:+919876543210"
+              href="tel:+919415180711"
               className="text-black/70 hover:text-gold transition"
             >
               Call →
             </a>
 
             <a
-              href="mailto:contact@anuragnarain.com"
+              href="mailto:advo.anurag@gmail.com"
               className="text-black/70 hover:text-gold transition"
             >
               Email →
