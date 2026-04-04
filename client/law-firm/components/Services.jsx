@@ -91,7 +91,7 @@ export default function ServicesPage() {
 
       {/* 💼 SERVICES */}
       <section className="relative w-full overflow-hidden bg-white">
-        <div className="max-w-7xl mx-auto px-6 pb-24 pt-10  grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto px-6 pb-24 pt-10  grid grid-cols-2 lg:grid-cols-4 gap-2">
 
           {SERVICES.map((service, i) => (
   <Link key={i} href={`/services/${service.slug}`}>
@@ -100,7 +100,7 @@ export default function ServicesPage() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: i * 0.1 }}
       viewport={{ once: true }}
-      className="cursor-pointer min-h-[280px] group p-6 rounded-2xl bg-white/70 backdrop-blur-lg border border-black/5 shadow-sm hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] transition duration-300 hover:-translate-y-2"
+      className="cursor-pointer min-h-[230px] group p-2 rounded-2xl bg-white/70 backdrop-blur-lg border border-black/5 shadow-sm hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] transition duration-300 hover:-translate-y-2"
     >
               <div className="text-3xl mb-4 group-hover:scale-110 transition">
              <Image
@@ -111,11 +111,11 @@ export default function ServicesPage() {
 />
               </div>
 
-              <h3 className="text-xl font-semibold group-hover:text-[color:var(--color-gold)] transition">
+              <h3 className=" text-sm md:text-xl font-semibold group-hover:text-[color:var(--color-gold)] transition">
                 {service.title}
               </h3>
 
-              <p className="mt-3 text-gray-500 text-sm leading-relaxed">
+              <p className="mt-3 text-gray-500 text-xs leading-relaxed">
                 {service.desc}
               </p>
 
