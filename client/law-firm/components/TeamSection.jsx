@@ -1,5 +1,5 @@
-import React from "react";
-
+'use client'
+import React, { useState } from "react";
 const TEAM = [
   {
     name: "Adv. Anurag Narain",
@@ -13,58 +13,63 @@ const TEAM = [
     role: "Associate",
     image: "/images/team/Shailendra-Misra.jpeg",
     position: "top",
+    bio:"Shailendra Misra is a seasoned criminal lawyer known for his sharp legal acumen and extensive courtroom experience. With years of practice in criminal law, he has built a strong reputation for handling complex cases with precision and strategic insight."
   },
-  {
-    name: "Adv. Sudhanshu Tripathi",
-    role: "Associate",
-    image: "/images/team/sudhanshu.jpg", // 🔁 add image
-    position: "top",
-  },
+ 
   {
     name: "Adv. Pawan Kumar Verma",
     role: "Associate",
     image: "/images/team/Pawan-Kumar-Verma.jpeg", // 🔁 add image
     position: "top",
+    bio:"Pawan Verma is an experienced civil lawyer who handles a wide range of matters before both District Courts and the High Court. He is known for his practical approach and effective case handling. With strong professional networks and familiarity with High Court procedures, he ensures smooth coordination and diligent representation for his clients."
   },
   {
     name: "Adv. Priyanka Tiwari",
     role: "Associate",
     image: "/images/team/priyanka.jpg",
     position: "top",
+    bio:"Priyanka Tiwari is a dedicated legal professional with prior experience working in verious law firms. She has handled numerous cases before both the High Court and District Courts, bringing a well-rounded and practical approach to litigation. Her experience across forums enables her to manage cases efficiently with strong legal insight and attention to detail."
   },
   {
     name: "Adv. Prashant Chaurasia",
     role: "Associate",
-    image: "/images/team/prashant.jpg",
+    image: "/images/team/Prashant-Chaurasia.png",
     position: "top",
+    bio:"Prashant Chaurasia is a legal professional who graduated from RML College, Lucknow. He has developed strong expertise in service law and regularly practices before the High Court and the State Public Service Tribunal. Known for his sound legal understanding and focused approach, he effectively handles matters relating to service disputes and administrative law."
   },
   {
     name: "Adv. Vartika Pandey",
     role: "Associate",
     image: "/images/team/Vartika-Pandey.jpeg",
     position: "top",
+    bio:"Vartika Pandey is a sincere and diligent civil advocate known for her strong command over legal drafting and effective arguments before the High Court. Her attention to detail and clarity in presenting cases make her a reliable professional in civil litigation",
   },
   {
     name: "Adv. Chitrangda Narain",
     role: "Associate",
     image: "/images/team/Chitrangda-Narain.jpeg",
     position: "top",
+    bio:"Chitangada Narain is a fourth-generation lawyer with a strong legacy in the legal profession. She is known for her sincerity in drafting and meticulous handling of cases. She has been actively involved in several Public Interest Litigations before the High Court and has represented members of the transgender community. Her work has also contributed to reported judgments, reflecting her impact and credibility in the field",
   },
   {
     name: "Adv. Shobhit Verma",
     role: "Associate",
     image: "/images/team/adv-Shobhit-Verma.jpeg",
     position: "top",
+    bio:"Shobhit Verma is a skilled legal professional known for his excellent client-handling abilities and strong command over both civil and criminal law. He actively practices before the High Court, District Courts, as well as various tribunals. With a solid grip on legal drafting and a practical approach to litigation, he ensures effective representation and client satisfaction.",
   },
   {
     name: " Nachiketa Narain",
     role: "Lawyer",
     image: "/images/team/Nachiketa-Narain.jpeg",
     position: "bottom",
+    bio:"Nachiketa Narain is an emerging legal professional currently pursuing his law degree from Rajiv Gandhi National University of Law (RGNUL), Punjab. He has actively participated in numerous moot court competitions, showcasing his advocacy and research skills. Additionally, he has gained practical exposure through internships with various judges, courts, and reputed law firms, reflecting his strong commitment to the legal profession.",
   },
 ];
 
 export default function TeamSection() {
+   const [selectedMember, setSelectedMember] = useState(null);
+
   return (
     <section className="py-20 px-4 bg-navy text-white">
 
@@ -102,31 +107,81 @@ export default function TeamSection() {
 </div>
 
       {/* DESKTOP GRID */}
-      <div className="hidden md:grid max-w-6xl mx-auto gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+       <div className="hidden md:grid max-w-6xl mx-auto gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {TEAM.map((member, index) => (
-          <Card key={index} member={member} />
+          <Card key={index} member={member} onClick={setSelectedMember} />
         ))}
       </div>
+      
 
       {/* MOBILE CAROUSEL */}
+     {/* MOBILE */}
       <div className="md:hidden overflow-x-auto no-scrollbar flex gap-4 px-2 snap-x snap-mandatory scroll-smooth">
-
-  {TEAM.map((member, index) => (
+        {TEAM.map((member, index) => (
+          <div key={index} className="snap-center shrink-0 w-[75%]">
+            <Card member={member} onClick={setSelectedMember} />
+          </div>
+        ))}
+      </div>
+     {selectedMember && (
+  <div
+    onClick={() => setSelectedMember(null)}
+    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center px-4"
+  >
     <div
-      key={index}
-      className="snap-center shrink-0 w-[75%]"
+      onClick={(e) => e.stopPropagation()}
+      className="w-full max-w-3xl bg-navy border border-white/10 rounded-2xl overflow-hidden relative 
+                 max-h-[90vh] overflow-y-auto
+                 animate-[modalFade_.35s_ease]"
     >
-      <Card member={member} />
-    </div>
-  ))}
 
+      {/* CLOSE BUTTON */}
+      <button
+        onClick={() => setSelectedMember(null)}
+        className="absolute top-4 right-4 text-white text-lg z-10"
+      >
+        ✕
+      </button>
+
+      <div className="flex flex-col md:flex-row">
+
+        {/* IMAGE */}
+        <div className="md:w-1/2 w-full p-4 md:p-0 flex justify-center items-center bg-black/20">
+  <img
+    src={selectedMember.image}
+    alt={selectedMember.name}
+    className="max-h-56 md:max-h-full w-auto object-contain rounded-xl md:rounded-none"
+  />
 </div>
+
+        {/* CONTENT */}
+        <div className="md:w-1/2 w-full p-6 flex flex-col justify-center">
+
+          <h3 className="text-xl md:text-2xl font-semibold text-yellow-400 mb-2">
+            {selectedMember.name}
+          </h3>
+
+          <p className="text-sm text-gray-300 mb-4">
+            {selectedMember.role}
+          </p>
+
+          <div className="w-10 h-[2px] bg-yellow-400 mb-4" />
+
+          <p className="text-gray-400 text-sm leading-relaxed">
+            {selectedMember.bio}
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+)}
     </section>
   );
 }
 
 /* CARD COMPONENT */
-function Card({ member }) {
+function Card({ member, onClick }) {
   return (
     <div className="group relative rounded-2xl overflow-hidden transition-all duration-500">
       <div
@@ -144,7 +199,6 @@ function Card({ member }) {
             style={{ objectPosition: member.position || "center" }}
           />
 
-          {/* OVERLAY */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
           {/* TEXT */}
@@ -153,6 +207,14 @@ function Card({ member }) {
               {member.name}
             </h3>
             <p className="text-xs text-gray-300">{member.role}</p>
+
+            {/* BUTTON */}
+            <button
+              onClick={() => onClick(member)}
+              className="mt-2 text-xs text-yellow-400 opacity-50 group-hover:opacity-100 transition"
+            >
+              Know More →
+            </button>
           </div>
         </div>
       </div>

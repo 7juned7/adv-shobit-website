@@ -49,9 +49,9 @@ export default function AboutSection() {
           className="flex justify-center"
         >
           <img
-            src="/images/team/adv-narain.jpeg"
+            src="/images/team/adv-anuragv2.jpeg"
             alt="Law Firm"
-            className="w-full max-w-md rounded-2xl shadow-xl border border-black/10"
+            className="w-full max-w-md rounded-full shadow-xl border border-black/10"
           />
         </motion.div>
       </div>
