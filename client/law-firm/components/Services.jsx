@@ -91,7 +91,7 @@ export default function ServicesPage() {
 
       {/* 💼 SERVICES */}
       <section className="relative w-full overflow-hidden bg-white">
-        <div className="max-w-7xl mx-auto px-6 pb-24 pt-10  grid grid-cols-2 lg:grid-cols-4 gap-2">
+        <div className="max-w-7xl mx-auto px-6 pb-24 pt-10  grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
 
           {SERVICES.map((service, i) => (
   <Link key={i} href={`/services/${service.slug}`}>
