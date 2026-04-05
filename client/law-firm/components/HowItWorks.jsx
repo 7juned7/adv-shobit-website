@@ -148,7 +148,7 @@ export default function HowItWorks() {
     href="https://wa.me/918009099837"
     target="_blank"
     rel="noopener noreferrer"
-    className=" lg:inline-block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition"
+    className=" lg:inline-block bg-gold text-black px-6 mt-8 py-2.5 rounded-lg font-medium hover:opacity-90 transition"
   >
     Book Consultation
   </a>
