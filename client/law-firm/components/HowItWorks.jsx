@@ -140,7 +140,7 @@ export default function HowItWorks() {
           Need Legal Assistance?
         </h2>
 
-        <p className="mt-4 text-gray-500">
+        <p className="my-6  text-gray-500">
           Speak with our experts today.
         </p>
 
