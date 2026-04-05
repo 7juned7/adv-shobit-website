@@ -100,15 +100,31 @@ export default function Contact() {
   {/* 🔥 subtle inner glow */}
   <div className="absolute inset-0 rounded-2xl pointer-events-none bg-gradient-to-br from-white/5 to-transparent" />
 
+
+  {/* subtle inner glow */}
+  <div className="absolute inset-0 rounded-2xl pointer-events-none bg-gradient-to-br from-white/5 to-transparent" />
+
   <form
     onSubmit={(e) => {
       e.preventDefault();
+
       const name = e.target.name.value;
+      const email = e.target.email.value;
       const message = e.target.message.value;
 
-      window.open(
-        `https://wa.me/919876543210?text=Hello, I am ${name}. ${message}`
-      );
+      const phoneNumber = "918009099837";
+
+      const text = `Hello, I am ${name}.
+Email: ${email}
+
+I would like to discuss my case:
+${message}`;
+
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, "_blank");
+
+      // optional reset (premium feel)
+      e.target.reset();
     }}
     className="relative flex flex-col gap-5"
   >
@@ -139,13 +155,14 @@ export default function Contact() {
 
     <button
       type="submit"
-      className="mt-4 border border-gold text-gold py-3 rounded-lg  hover:bg-gold hover:text-black transition duration-300"
+      className="mt-4 border border-gold text-gold py-3 rounded-lg hover:bg-gold hover:text-black transition duration-300"
     >
       Request Consultation
     </button>
 
   </form>
 </div>
+
       </div>
     </section>
   );
