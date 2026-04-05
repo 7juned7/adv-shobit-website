@@ -2,21 +2,19 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
-// import Footer from "@/components/Footer";
 
-import { Playfair_Display, Inter } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 
-// Fonts
-const heading = Playfair_Display({
+const heading = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
   variable: "--font-heading",
-  display: "swap",
 });
 
-const body = Inter({
+const body = Manrope({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-body",
-  display: "swap",
 });
 
 // SEO Metadata
@@ -28,11 +26,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${heading.variable} ${body.variable} font-body bg-white text-gray-900`}
-      >
-        <WhatsAppButton/>
+    <html lang="en" className={`${heading.variable} ${body.variable}`}>
+      <body className="bg-white text-gray-900">
+        <WhatsAppButton />
         <Navbar />
         <main>{children}</main>
         <Footer />

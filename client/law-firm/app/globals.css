@@ -1,12 +1,26 @@
 @import "tailwindcss";
+
+
 @theme {
   --color-navy: #020617;
   --color-royal: #1E3A8A;
   --color-gold: #D4AF37;
 
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
-}.nav-link {
+  --font-heading: "Cormorant Garamond", serif;
+--font-body: "Manrope", sans-serif;
+}
+
+/* 🔥 Apply Fonts Globally */
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* 🔥 Nav Link */
+.nav-link {
   position: relative;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -27,17 +41,15 @@
   width: 100%;
 }
 
+/* 🔥 Cursor Fix */
 a, button {
   cursor: pointer;
 }
 
+/* 🔥 Infinite Scroll */
 @keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
 .animate-scroll {
@@ -45,6 +57,7 @@ a, button {
   width: max-content;
   animation: scroll 25s linear infinite;
 }
+
 /* 🔥 Input Field */
 .input-field {
   @apply bg-transparent border border-white/20 px-4 py-3 rounded-lg 
@@ -56,6 +69,8 @@ a, button {
   @apply bg-gold text-black py-3 rounded-lg font-medium tracking-wide 
   hover:opacity-90 transition;
 }
+
+/* 🔥 Footer Links */
 footer a {
   position: relative;
 }
@@ -75,16 +90,17 @@ footer a:hover::after {
   width: 100%;
 }
 
-/* Hide scrollbar */
+/* 🔥 Hide Scrollbar */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+/* 🔥 Modal Animation */
 @keyframes modalFade {
   from {
     opacity: 0;

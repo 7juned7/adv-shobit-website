@@ -26,7 +26,7 @@ const TEAM = [
   {
     name: "Adv. Priyanka Tiwari",
     role: "Associate",
-    image: "/images/team/priyanka.jpg",
+    image: "/images/team/Priyanka-Tiwari.png",
     position: "top",
     bio:"Priyanka Tiwari is a dedicated legal professional with prior experience working in verious law firms. She has handled numerous cases before both the High Court and District Courts, bringing a well-rounded and practical approach to litigation. Her experience across forums enables her to manage cases efficiently with strong legal insight and attention to detail."
   },
@@ -40,7 +40,7 @@ const TEAM = [
   {
     name: "Adv. Vartika Pandey",
     role: "Associate",
-    image: "/images/team/Vartika-Pandey.jpeg",
+    image: "/images/team/Vartika-Pandey.png",
     position: "top",
     bio:"Vartika Pandey is a sincere and diligent civil advocate known for her strong command over legal drafting and effective arguments before the High Court. Her attention to detail and clarity in presenting cases make her a reliable professional in civil litigation",
   },
