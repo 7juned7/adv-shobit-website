@@ -144,9 +144,14 @@ export default function HowItWorks() {
           Speak with our experts today.
         </p>
 
-        <button className="mt-8 px-8 py-3 border border-[color:var(--color-gold)] text-[color:var(--color-gold)] rounded-xl font-semibold hover:bg-[color:var(--color-gold)] hover:text-black transition">
-          Book Consultation
-        </button>
+        <a
+    href="https://wa.me/918009099837"
+    target="_blank"
+    rel="noopener noreferrer"
+    className=" lg:inline-block bg-gold text-black px-6 py-2.5 rounded-lg font-medium hover:opacity-90 transition"
+  >
+    Book Consultation
+  </a>
       </section>
       
     </section>
