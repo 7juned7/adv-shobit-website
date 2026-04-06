@@ -25,6 +25,8 @@ export default function Footer() {
             <li className="hover:text-gold transition">Commercial Litigation</li>
             <li className="hover:text-gold transition">Property Law</li>
             <li className="hover:text-gold transition">Asset Protection</li>
+            <li className="hover:text-gold transition">Criminal Law</li>
+            <li className="hover:text-gold transition">Service Law</li>
           </ul>
         </div>
 
