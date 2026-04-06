@@ -107,7 +107,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${service.title} Services in Lucknow`,
       description: service.description,
-      url: `https://yourdomain.com/services/${slug}`, // 🔁 replace
+      url: `https://anuragnarainlegal.com/services/${slug}`, // 🔁 replace
       siteName: "Anurag Narain & Associates",
       images: [
         {
@@ -129,7 +129,7 @@ export async function generateMetadata({ params }) {
     },
 
     alternates: {
-      canonical: `https://yourdomain.com/services/${slug}`, // 🔁 replace
+      canonical: `https://anuragnarainlegal.com/services/${slug}`, // 🔁 replace
     },
   };
 }

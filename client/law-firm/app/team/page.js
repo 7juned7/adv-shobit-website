@@ -18,7 +18,7 @@ export const metadata = {
     title: "Our Team | Anurag Narain & Associates",
     description:
       "Get to know the experienced legal professionals behind our success.",
-    url: "https://yourdomain.com/team", // 🔁 replace
+    url: "https://anuragnarainlegal.com/team", // 🔁 replace
     siteName: "Anurag Narain & Associates",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://yourdomain.com/team", // 🔁 replace
+    canonical: "https://anuragnarainlegal.com/team", // 🔁 replace
   },
 };
 

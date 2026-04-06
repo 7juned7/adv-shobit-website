@@ -22,7 +22,7 @@ export const metadata = {
       "Anurag Narain & Associates | Leading Law Firm in Lucknow",
     description:
       "Discover our legacy and expertise as one of the most trusted law firms in Lucknow.",
-    url: "https://yourdomain.com/about", // 🔁 replace
+    url: "https://anuragnarainlegal.com/about", // 🔁 replace
     siteName: "Anurag Narain & Associates",
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://yourdomain.com/about", // 🔁 replace
+    canonical: "https://anuragnarainlegal.com/about", // 🔁 replace
   },
 };
 

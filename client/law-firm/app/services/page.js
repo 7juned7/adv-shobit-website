@@ -18,7 +18,7 @@ export const metadata = {
     title: "Legal Services | Anurag Narain & Associates",
     description:
       "Comprehensive legal services tailored to your needs including corporate, litigation, and property law.",
-    url: "https://yourdomain.com/services", // 🔁 replace
+    url: "https://anuragnarainlegal.com/services", // 🔁 replace
     siteName: "Anurag Narain & Associates",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://yourdomain.com/services", // 🔁 replace
+    canonical: "https://anuragnarainlegal.com/services", // 🔁 replace
   },
 };
 
