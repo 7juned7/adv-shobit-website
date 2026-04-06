@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.anuragnarainlegal.com
-
-# Sitemaps
-Sitemap: https://www.anuragnarainlegal.com/sitemap.xml
