@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Anurag Narain & Associates",
     images: [
       {
-        url: "/images/og-services.jpg", // 🔁 add image
+        url: "/images/og-image.jpeg", // 🔁 add image
         width: 1200,
         height: 630,
         alt: "Legal Services - Anurag Narain & Associates",
@@ -37,7 +37,7 @@ export const metadata = {
     title: "Legal Services | Anurag Narain & Associates",
     description:
       "Expert legal services in corporate law, litigation, and more.",
-    images: ["/images/og-services.jpg"],
+    images: ["/images/og-image.jpeg"],
   },
 
   alternates: {

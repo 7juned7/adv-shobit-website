@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "Anurag Narain & Associates",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Law Firm in Lucknow - Anurag Narain & Associates",
@@ -41,7 +41,7 @@ export const metadata = {
     title: "Best Law Firm in Lucknow | About Us",
     description:
       "Experienced legal professionals offering trusted legal services in Lucknow.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-image.jpeg"],
   },
 
   alternates: {

@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "Anurag Narain & Associates",
     images: [
       {
-        url: "/images/og-contact.jpg", // 🔁 add image
+        url: "/images/og-image.jpeg", // 🔁 add image
         width: 1200,
         height: 630,
         alt: "Contact Law Firm in Lucknow",
@@ -39,7 +39,7 @@ export const metadata = {
     title: "Contact Lawyers in Lucknow",
     description:
       "Book consultation with experienced legal experts in Lucknow.",
-    images: ["/images/og-contact.jpg"],
+    images: ["/images/og-image.jpeg"],
   },
 
   alternates: {
