@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-navy text-white pt-20 px-6 border-t border-white/10">
@@ -42,6 +44,8 @@ export default function Footer() {
             <li>Media</li>
           </ul>
         </div>
+        {/* LEGAL */}
+
 
         {/* CONTACT + MAP */}
         <div>
@@ -122,7 +126,23 @@ export default function Footer() {
     Webjuncture
   </a>
 </p>
-      </div>
+
+  
+  <ul className="space-y-3 flex gap-2 text-sm text-white/70">
+    <li>
+      <Link href="/privacy-policy" className="hover:text-gold transition">
+        Privacy Policy
+      </Link>
+    </li>
+    
+    <li>
+      <Link href="/disclaimer" className="hover:text-gold transition">
+        Legal Disclaimer
+      </Link>
+    </li>
+  </ul>
+</div>
+      
 
     </footer>
   );

@@ -4,6 +4,9 @@ import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import CookieBanner from "@/components/CookieBanner";
+import Analytics from "@/components/Analytics";
+import { Suspense } from "react";
 
 const heading = Cormorant_Garamond({
   subsets: ["latin"],
@@ -99,10 +102,13 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-
+<Suspense fallback={null}>
+  <Analytics />
+</Suspense>
         <WhatsAppButton />
         <Navbar />
         <main>{children}</main>
+        <CookieBanner />
         <Footer />
       </body>
     </html>
