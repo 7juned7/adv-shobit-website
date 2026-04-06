@@ -7,6 +7,7 @@ const TEAM = [
     image: "/images/team/Anurag-Narain.jpeg", // 🔁 correct image lagana
     position: "center 20%",
     highlight: true,
+    bio:"Anurag Narain Srivastava is a renowned civil lawyer practicing before the High Court, widely respected for his deep expertise in civil law. With over 31 years of extensive experience, he has built a distinguished reputation for handling complex civil matters with precision and strategic insight. Known for his sharp legal acumen, persuasive advocacy, and meticulous drafting, he has consistently delivered effective representation to his clients. His long-standing presence in the legal field reflects his credibility, professionalism, and unwavering commitment to justice.",
   },
   {
     name: "Adv. Shailendra Mishra",
