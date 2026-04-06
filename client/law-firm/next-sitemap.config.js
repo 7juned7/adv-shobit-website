@@ -11,9 +11,5 @@ module.exports = {
     "/api/*",
   ],
 
-  robotsTxtOptions: {
-    additionalSitemaps: [
-      "https://www.anuragnarainlegal.com/sitemap.xml",
-    ],
-  },
+  
 };
