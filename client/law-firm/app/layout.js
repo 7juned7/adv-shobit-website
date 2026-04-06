@@ -23,7 +23,9 @@ const body = Manrope({
 // ✅ SEO Metadata (Advanced)
 export const metadata = {
   metadataBase: new URL("https://www.anuragnarainlegal.com"),
-
+verification: {
+    google: "28sQEzK0wKbrmY88uxlhcEj5M8snOqExJdMFhrXHlxU",
+  },
   title: {
     default:
       "Best Law Firm in Lucknow | Anurag Narain & Associates (Since 1934)",
@@ -77,6 +79,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${heading.variable} ${body.variable}`}>
+      
       <body className="bg-white text-gray-900">
         {/* ✅ Schema (Structured Data) */}
         <script
