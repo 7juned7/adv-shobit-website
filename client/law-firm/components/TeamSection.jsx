@@ -22,8 +22,7 @@ const TEAM = [
     role: "Associate",
     image: "/images/team/Pawan-Kumar-Verma.jpeg", // 🔁 add image
     position: "top",
-    bio:"Pawan Verma is an experienced civil lawyer who handles a wide range of matters before both District Courts and the High Court. He is known for his practical approach and effective case handling. With strong professional networks and familiarity with High Court procedures, he ensures smooth coordination and diligent representation for his clients."
-  },
+    bio:"Pawan Verma is an experienced civil lawyer who handles a wide range of matters before both District Courts and the High Court. He is known for his practical approach and effective case handling. He also regularly appears before the Board of Revenue, further strengthening his diverse legal practice. With strong professional networks and familiarity with High Court procedures, he ensures smooth coordination and diligent representation for his clients. Alongside his professional work, he is committed to using his legal knowledge to advocate for and support the rights and interests of the transgender community.",},
   {
     name: "Adv. Priyanka Tiwari",
     role: "Associate",
@@ -36,15 +35,14 @@ const TEAM = [
     role: "Associate",
     image: "/images/team/Prashant-Chaurasia.png",
     position: "top",
-    bio:"Prashant Chaurasia is a legal professional who graduated from RML College, Lucknow. He has developed strong expertise in service law and regularly practices before the High Court and the State Public Service Tribunal. Known for his sound legal understanding and focused approach, he effectively handles matters relating to service disputes and administrative law."
+    bio:"Prashant Chaurasia is a legal professional who graduated from Dr.Ram Manohar Lohiya National Law University College, Lucknow. He has developed strong expertise in service law and regularly practices before the High Court and the State Public Service Tribunal. Known for his sound legal understanding and focused approach, he effectively handles matters relating to service disputes and administrative law."
   },
   {
     name: "Adv. Vartika Pandey",
     role: "Associate",
     image: "/images/team/Vartika-Pandey.png",
     position: "top",
-    bio:"Vartika Pandey is a sincere and diligent civil advocate known for her strong command over legal drafting and effective arguments before the High Court. Her attention to detail and clarity in presenting cases make her a reliable professional in civil litigation",
-  },
+    bio:"Vartika Pandey is a diligent civil advocate with a strong command over drafting and effective arguments before the High Court. She also appears before the Armed Forces Tribunal and handles contempt matters in service law, reflecting her versatility in litigation. Known for her precision, clarity, and well-prepared approach, she ensures effective representation and consistently delivers reliable legal solutions to her clients", },
   {
     name: "Adv. Chitrangda Narain",
     role: "Associate",
@@ -55,10 +53,9 @@ const TEAM = [
   {
     name: "Adv. Shobhit Verma",
     role: "Associate",
-    image: "/images/team/adv-Shobhit-Verma.jpeg",
+    image: "/images/team/shobit_verma.jpeg",
     position: "top",
-    bio:"Shobhit Verma is a skilled legal professional known for his excellent client-handling abilities and strong command over both civil and criminal law. He actively practices before the High Court, District Courts, as well as various tribunals. With a solid grip on legal drafting and a practical approach to litigation, he ensures effective representation and client satisfaction.",
-  },
+    bio:"Shobhit Verma is a skilled legal professional known for his excellent client-handling abilities and strong command over both civil and criminal law. He actively practices before the High Court, District Courts, various tribunals, and also appears before the Board of Revenue. He is a graduate of the University of Allahabad and has completed his LL.B. from Rohilkhand University. With a strong grip on legal drafting and a practical approach to litigation, he ensures effective representation and client satisfaction.",},
   {
     name: " Nachiketa Narain",
     role: "Lawyer",
