@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 
-const GA_ID = "G-XXXXXXXXXX";
+const GA_ID = "G-PZ38TXW58R";
 
 export default function Analytics() {
   const pathname = usePathname();
