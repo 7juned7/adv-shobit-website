@@ -63,6 +63,13 @@ const TEAM = [
     position: "bottom",
     bio:"Nachiketa Narain is an emerging legal professional currently pursuing his law degree from Rajiv Gandhi National University of Law (RGNUL), Punjab. He has actively participated in numerous moot court competitions, showcasing his advocacy and research skills. Additionally, he has gained practical exposure through internships with various judges, courts, and reputed law firms, reflecting his strong commitment to the legal profession.",
   },
+  {
+    name:"Advocate Shruti Singh",
+    role:"Associate",
+    image:"/images/team/shruti_singh.jpeg",
+    position:"top",
+    bio:"Advocate Shruti Singh is a dedicated legal professional currently practicing before the Supreme Court of India and the Lucknow Bench of the Hon’ble Allahabad High Court. She possesses strong expertise in legal drafting, research, and litigation, regularly handling matters such as SLPs (Civil & Criminal), Transfer Petitions, Counter Affidavits, Interim Applications, and Caveats.Her experience is complemented by strong skills in team management, legal research platforms like SCC Online and LiveLaw, and a passion for using law as a tool for meaningful impact.",
+  },
 ];
 
 export default function TeamSection() {
