@@ -39,7 +39,7 @@ const TEAM = [
   },
    {
     name:"Advocate Shruti Singh",
-    role:"Advocate",
+    role:"Associate",
     image:"/images/team/shruti-singh.jpeg",
     position:"top",
     bio:"Advocate Shruti Singh is a dedicated legal professional currently practicing before the Supreme Court of India and the Lucknow Bench of the Hon’ble Allahabad High Court. She possesses strong expertise in legal drafting, research, and litigation, regularly handling matters such as SLPs (Civil & Criminal), Transfer Petitions, Counter Affidavits, Interim Applications, and Caveats.Her experience is complemented by strong skills in team management, legal research platforms like SCC Online and LiveLaw, and a passion for using law as a tool for meaningful impact.",
@@ -73,7 +73,7 @@ const TEAM = [
  
   {
     name:"Advocate Sweta Mishra",
-    role:"Advocate",
+    role:"Associate",
     image:"/images/team/shweta-mishra.jpeg",
     position:"top",
     bio:"Shweta Mishra is a dedicated and hardworking young advocate practicing civil and service law before the Lucknow Bench of the High Court. She is known for her sincerity, disciplined approach, and keen understanding of legal procedures.With a strong focus on legal drafting, research, and case preparation, she handles matters with clarity and precision. Her commitment to delivering effective legal solutions and her consistent efforts toward professional growth make her a promising practitioner in civil and service litigation."},
