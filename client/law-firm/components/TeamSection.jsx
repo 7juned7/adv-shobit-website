@@ -35,7 +35,7 @@ const TEAM = [
     role: "Associate",
     image: "/images/team/Prashant-Chaurasia.png",
     position: "top",
-    bio:"Prashant Chaurasia is a legal professional who graduated from Dr.Ram Manohar Lohiya National Law University College, Lucknow. He has developed strong expertise in service law and regularly practices before the High Court and the State Public Service Tribunal. Known for his sound legal understanding and focused approach, he effectively handles matters relating to service disputes and administrative law."
+    bio:"Prashant Chaurasia is a legal professional who graduated from Dr.Ram Manohar Lohiya National Law University, Lucknow. He has developed strong expertise in service law and regularly practices before the High Court and the State Public Service Tribunal. Known for his sound legal understanding and focused approach, he effectively handles matters relating to service disputes and administrative law."
   },
    {
     name:"Advocate Shruti Singh",
