@@ -22,7 +22,7 @@ const TEAM = [
     role: "Associate",
     image: "/images/team/Pawan-Kumar-Verma.jpeg", // 🔁 add image
     position: "top",
-    bio:"Pawan Verma is an experienced civil lawyer who handles a wide range of matters before both District Courts and the High Court. He is known for his practical approach and effective case handling. He also regularly appears before the Board of Revenue, further strengthening his diverse legal practice. With strong professional networks and familiarity with High Court procedures, he ensures smooth coordination and diligent representation for his clients. Alongside his professional work, he is committed to using his legal knowledge to advocate for and support the rights and interests of the transgender community.",},
+    bio:"Pawan Verma is an experienced civil and service lawyer who handles a wide range of matters before both District Courts and the High Court. He is known for his practical approach and effective case handling. He also regularly appears before the Board of Revenue, further strengthening his diverse legal practice. With strong professional networks and familiarity with High Court procedures, he ensures smooth coordination and diligent representation for his clients. Alongside his professional work, he is committed to using his legal knowledge to advocate for and support the rights and interests of the transgender community.",},
   {
     name: "Adv. Priyanka Tiwari",
     role: "Associate",
@@ -42,7 +42,7 @@ const TEAM = [
     role: "Associate",
     image: "/images/team/Vartika-Pandey.png",
     position: "top",
-    bio:"Vartika Pandey is a diligent civil advocate with a strong command over drafting and effective arguments before the High Court. She also appears before the Armed Forces Tribunal and handles contempt matters in service law, reflecting her versatility in litigation. Known for her precision, clarity, and well-prepared approach, she ensures effective representation and consistently delivers reliable legal solutions to her clients", },
+    bio:"Vartika Pandey is a diligent civil and service advocate with a strong command over drafting and effective arguments before the High Court. She also appears before the Armed Forces Tribunal and handles contempt matters in service law, reflecting her versatility in litigation. Known for her precision, clarity, and well-prepared approach, she ensures effective representation and consistently delivers reliable legal solutions to her clients", },
   {
     name: "Adv. Chitrangda Narain",
     role: "Associate",
@@ -65,11 +65,17 @@ const TEAM = [
   },
   {
     name:"Advocate Shruti Singh",
-    role:"Associate",
-    image:"/images/team/shruti_singh.jpeg",
+    role:"Advocate",
+    image:"/images/team/shruti-singh.jpeg",
     position:"top",
     bio:"Advocate Shruti Singh is a dedicated legal professional currently practicing before the Supreme Court of India and the Lucknow Bench of the Hon’ble Allahabad High Court. She possesses strong expertise in legal drafting, research, and litigation, regularly handling matters such as SLPs (Civil & Criminal), Transfer Petitions, Counter Affidavits, Interim Applications, and Caveats.Her experience is complemented by strong skills in team management, legal research platforms like SCC Online and LiveLaw, and a passion for using law as a tool for meaningful impact.",
   },
+  {
+    name:"Advocate Sweta Mishra",
+    role:"Advocate",
+    image:"/images/team/shweta-mishra.jpeg",
+    position:"top",
+    bio:"Shweta Mishra is a dedicated and hardworking young advocate practicing civil and service law before the Lucknow Bench of the High Court. She is known for her sincerity, disciplined approach, and keen understanding of legal procedures.With a strong focus on legal drafting, research, and case preparation, she handles matters with clarity and precision. Her commitment to delivering effective legal solutions and her consistent efforts toward professional growth make her a promising practitioner in civil and service litigation."},
 ];
 
 export default function TeamSection() {
