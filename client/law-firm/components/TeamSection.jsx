@@ -37,6 +37,13 @@ const TEAM = [
     position: "top",
     bio:"Prashant Chaurasia is a legal professional who graduated from Dr.Ram Manohar Lohiya National Law University College, Lucknow. He has developed strong expertise in service law and regularly practices before the High Court and the State Public Service Tribunal. Known for his sound legal understanding and focused approach, he effectively handles matters relating to service disputes and administrative law."
   },
+   {
+    name:"Advocate Shruti Singh",
+    role:"Advocate",
+    image:"/images/team/shruti-singh.jpeg",
+    position:"top",
+    bio:"Advocate Shruti Singh is a dedicated legal professional currently practicing before the Supreme Court of India and the Lucknow Bench of the Hon’ble Allahabad High Court. She possesses strong expertise in legal drafting, research, and litigation, regularly handling matters such as SLPs (Civil & Criminal), Transfer Petitions, Counter Affidavits, Interim Applications, and Caveats.Her experience is complemented by strong skills in team management, legal research platforms like SCC Online and LiveLaw, and a passion for using law as a tool for meaningful impact.",
+  },
   {
     name: "Adv. Vartika Pandey",
     role: "Associate",
@@ -63,13 +70,7 @@ const TEAM = [
     position: "bottom",
     bio:"Nachiketa Narain is an emerging legal professional currently pursuing his law degree from Rajiv Gandhi National University of Law (RGNUL), Punjab. He has actively participated in numerous moot court competitions, showcasing his advocacy and research skills. Additionally, he has gained practical exposure through internships with various judges, courts, and reputed law firms, reflecting his strong commitment to the legal profession.",
   },
-  {
-    name:"Advocate Shruti Singh",
-    role:"Advocate",
-    image:"/images/team/shruti-singh.jpeg",
-    position:"top",
-    bio:"Advocate Shruti Singh is a dedicated legal professional currently practicing before the Supreme Court of India and the Lucknow Bench of the Hon’ble Allahabad High Court. She possesses strong expertise in legal drafting, research, and litigation, regularly handling matters such as SLPs (Civil & Criminal), Transfer Petitions, Counter Affidavits, Interim Applications, and Caveats.Her experience is complemented by strong skills in team management, legal research platforms like SCC Online and LiveLaw, and a passion for using law as a tool for meaningful impact.",
-  },
+ 
   {
     name:"Advocate Sweta Mishra",
     role:"Advocate",
