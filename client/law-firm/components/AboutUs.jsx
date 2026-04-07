@@ -23,7 +23,7 @@ export default function AboutSection() {
           </h2>
 
           <p className="mt-6 text-gray-600 leading-relaxed">
-            Founded in 1934 by Late Shri Awadhesh Narayan, the Narain family has upheld a distinguished legacy of justice, integrity, and legal excellence across generations. This enduring tradition was carried forward with dedication by Late Shri Kamlesh Narayan, further strengthening the firm’s foundation. What began as a single lawyer’s chamber has today evolved into a multidisciplinary practice under the leadership of Mr. Anurag Narain, a Civil Law expert with over 31 years of experience. Upholding the values of discipline, diligence, and dignity, he continues to carry forward the legacy with distinction, delivering trusted, client-focused legal solutions in Lucknow across diverse and complex matters.”
+            Founded in 1934 by Late Shri Awadhesh Narayan, the Narain family has upheld a distinguished legacy of justice, integrity, and legal excellence across generations. This enduring tradition was carried forward with dedication by Late Shri Kamlesh Narayan, further strengthening the firm’s foundation. What began as a single lawyer’s chamber has today evolved into a multidisciplinary practice under the leadership of Mr. Anurag Narain, a Civil and Service Law expert with over 31 years of experience. Upholding the values of discipline, diligence, and dignity, he continues to carry forward the legacy with distinction, delivering trusted, client-focused legal solutions in Lucknow across diverse and complex matters.”
           </p>
 
           <p className="mt-4 text-gray-600 leading-relaxed">
