@@ -40,7 +40,7 @@ const TEAM = [
    {
     name:"Advocate Shruti Singh",
     role:"Associate",
-    image:"/images/team/shruti-singh.jpeg",
+    image:"/images/team/shruti-singh.png",
     position:"top",
     bio:"Advocate Shruti Singh is a dedicated practitioner currently practicing before the Hon’ble Supreme Court of India and the Lucknow Bench of the Hon’ble Allahabad High Court. She possesses strong expertise in Criminal, Civil, Constitutional, and Service matters.She has completed her B.A. LL.B. (Hons.) from University of Lucknow and pursued her LL.M. in Constitutional Law from Amity University.Her experience is complemented by strong skills in team management and legal research platforms like SCC Online and LiveLaw, along with a deep passion for using law as a tool for meaningful impact."},
   {
