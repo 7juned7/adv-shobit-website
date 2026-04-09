@@ -42,8 +42,7 @@ const TEAM = [
     role:"Associate",
     image:"/images/team/shruti-singh.jpeg",
     position:"top",
-    bio:"Advocate Shruti Singh is a dedicated legal professional currently practicing before the Supreme Court of India and the Lucknow Bench of the Hon’ble Allahabad High Court. She possesses strong expertise in legal drafting, research, and litigation, regularly handling matters such as SLPs (Civil & Criminal), Transfer Petitions, Counter Affidavits, Interim Applications, and Caveats.Her experience is complemented by strong skills in team management, legal research platforms like SCC Online and LiveLaw, and a passion for using law as a tool for meaningful impact.",
-  },
+    bio:"Advocate Shruti Singh is a dedicated practitioner currently practicing before the Hon’ble Supreme Court of India and the Lucknow Bench of the Hon’ble Allahabad High Court. She possesses strong expertise in Criminal, Civil, Constitutional, and Service matters.She has completed her B.A. LL.B. (Hons.) from University of Lucknow and pursued her LL.M. in Constitutional Law from Amity University.Her experience is complemented by strong skills in team management and legal research platforms like SCC Online and LiveLaw, along with a deep passion for using law as a tool for meaningful impact."},
   {
     name: "Adv. Vartika Pandey",
     role: "Associate",
