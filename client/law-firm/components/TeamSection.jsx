@@ -50,9 +50,9 @@ const TEAM = [
     position: "top",
     bio:"Vartika Pandey is a diligent civil and service advocate with a strong command over drafting and effective arguments before the High Court. She also appears before the Armed Forces Tribunal and handles contempt matters in service law, reflecting her versatility in litigation. Known for her precision, clarity, and well-prepared approach, she ensures effective representation and consistently delivers reliable legal solutions to her clients", },
   {
-    name: "Adv. Chitrangda Narain",
+    name: "Adv. Chitrangada Narayan",
     role: "Associate",
-    image: "/images/team/Chitrangda-Narain.jpeg",
+    image: "/images/team/Chitrangda-Narain.png",
     position: "top",
     bio:"Chitangada Narain is a fourth-generation lawyer with a strong legacy in the legal profession. She is known for her sincerity in drafting and meticulous handling of cases. She has been actively involved in several Public Interest Litigations before the High Court and has represented members of the transgender community. Her work has also contributed to reported judgments, reflecting her impact and credibility in the field",
   },
