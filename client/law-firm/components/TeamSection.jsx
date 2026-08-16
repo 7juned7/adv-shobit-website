@@ -54,7 +54,7 @@ const TEAM = [
     role: "Associate",
     image: "/images/team/Chitrangada-Narayan.png",
     position: "top",
-    bio:"Chitrangada Narayan is a fourth-generation lawyer with a strong legacy in the legal profession. She is known for her sincerity in drafting and meticulous handling of cases. She has been actively involved in several Public Interest Litigations before the High Court and has represented members of the transgender community. Her work has also contributed to reported judgments, reflecting her impact and credibility in the field",
+    bio:"Chitrangada is currently pursuing her LL.M. (Master of Laws) at IIT Kharagpur, strengthening her foundation as a fourth-generation advocate building on a strong legal legacy, both academically and professionally.She has actively argued transgender rights matters and environmental PILs, with her work centred on human, animal, and environmental rights.She approaches litigation with precision and a deep commitment to justice.",
   },
   {
     name: "Adv. Shobhit Verma",
